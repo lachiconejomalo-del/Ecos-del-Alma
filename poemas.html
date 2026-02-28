@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af37",
+                        "background-dark": "#0a0b10",
+                        "surface-dark": "#161821",
+                    },
+                    fontFamily: { "display": ["Newsreader", "serif"] },
+                },
+            },
+        }
+    </script>
+    <style> body { font-family: 'Newsreader', serif; } </style>
+    <title>Ecos del Alma - Explorar Poemas</title>
+</head>
+<body class="bg-background-dark text-slate-100 min-h-screen">
+    <header class="flex items-center justify-between border-b border-slate-800 px-6 py-4 lg:px-20 sticky top-0 z-50 bg-background-dark/80 backdrop-blur-md">
+        <div class="flex items-center gap-8">
+            <h2 class="text-primary text-xl font-bold italic">Ecos del Alma</h2>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-400">
+                <a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+                <a class="text-primary border-b border-primary" href="poemas.html">Poemas</a>
+                <a class="hover:text-primary transition-colors" href="concursos.html">Concursos</a>
+                <a class="hover:text-primary transition-colors" href="biblioteca.html">Biblioteca</a>
+                <a class="hover:text-primary transition-colors" href="diario.html">Mi Diario</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-10">
+        <div class="mb-12 space-y-2">
+            <h1 class="text-4xl font-bold italic">PoetryHaven</h1>
+            <p class="text-slate-400 italic">"Donde cada palabra resuena en la eternidad."</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-surface-dark border border-slate-800 p-8 rounded-xl hover:border-primary/50 transition-all group">
+                <span class="text-primary material-symbols-outlined text-3xl opacity-20 group-hover:opacity-100 transition-opacity">format_quote</span>
+                <h3 class="text-2xl font-bold mb-4 italic group-hover:text-primary transition-colors">Vientos de Olvido</h3>
+                <p class="text-slate-400 italic leading-relaxed mb-6">"Las hojas secas bailan un vals que nadie compuso, mientras el frío besa las ventanas..."</p>
+                <div class="pt-6 border-t border-slate-800 flex justify-between items-center">
+                    <span class="text-xs text-slate-300 font-bold italic">Julian S.</span>
+                    <span class="material-symbols-outlined text-sm text-slate-500">favorite</span>
+                </div>
+            </div>
+            <div class="bg-surface-dark border border-slate-800 p-8 rounded-xl hover:border-primary/50 transition-all group">
+                <span class="text-primary material-symbols-outlined text-3xl opacity-20 group-hover:opacity-100 transition-opacity">format_quote</span>
+                <h3 class="text-2xl font-bold mb-4 italic group-hover:text-primary transition-colors">Mar de Cristal</h3>
+                <p class="text-slate-400 italic leading-relaxed mb-6">"En la orilla del pensamiento, las olas rompen en silencio, trayendo caracolas de recuerdos..."</p>
+                <div class="pt-6 border-t border-slate-800 flex justify-between items-center">
+                    <span class="text-xs text-slate-300 font-bold italic">Elena de Valois</span>
+                    <span class="material-symbols-outlined text-sm text-slate-500">favorite</span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
