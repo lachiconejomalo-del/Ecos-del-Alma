@@ -1,0 +1,2136 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1754cf",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Newsreader', serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 py-4 bg-background-light dark:bg-background-dark">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<span class="material-symbols-outlined text-3xl">auto_stories</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight font-display italic">Ecos del Alma</h2>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-wide hover:bg-primary/90 transition-colors">
+<span class="truncate font-display">Login</span>
+</button>
+</header>
+<main class="flex-1 flex items-center justify-center p-6">
+<div class="w-full max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-xl border border-primary/10 shadow-2xl bg-white dark:bg-slate-900/50">
+<!-- Image/Quote Section -->
+<div class="relative hidden md:flex flex-col justify-end p-12 bg-primary/5 min-h-[600px] overflow-hidden">
+<div class="absolute inset-0 opacity-40 dark:opacity-20 bg-cover bg-center" data-alt="Close up of antique book pages and ink" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkUXC1p0BtuozRIRrk90VviuQoIDWC1lNRLcB8KzRUyzAY4LSNW26HHzaeL8c214mifsTLMs0vfEcJanI9bFzdIC6dZ7pHxyCJAF8PZc5Lb-sytEyapBTM77Y8f2COMKhiX8j7cXPgwusxmYqU-rehidghZAUa4J0cGCL4qr7TSkTmJTq1uq0cnMcvWWH0yUbfXinh1VRvwoPhOxiBkigntZKdJoZgDUXOC1kzgu7CjXha-eIOVlI0VsgpVy4Q23yidhRV2sDfee-8');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-80"></div>
+<div class="relative z-10 space-y-4">
+<span class="material-symbols-outlined text-primary text-4xl">format_quote</span>
+<p class="text-3xl font-display italic leading-relaxed text-slate-100">
+                            "Books are a uniquely portable magic."
+                        </p>
+<p class="text-slate-300 font-display text-lg">— Stephen King</p>
+</div>
+</div>
+<!-- Form Section -->
+<div class="p-8 md:p-16 flex flex-col justify-center bg-background-light dark:bg-background-dark/40">
+<div class="mb-10">
+<h1 class="text-4xl font-display font-bold text-slate-900 dark:text-white mb-2">Begin Your Journey</h1>
+<p class="text-slate-600 dark:text-slate-400 font-display italic">Join our literary circle and echo your soul's voice.</p>
+</div>
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 font-display">Full Name</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">person</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-slate-900 dark:text-white font-display" placeholder="Gabriel García Márquez" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 font-display">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">mail</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-slate-900 dark:text-white font-display" placeholder="writer@ecosdelalma.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 font-display">Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">lock</span>
+<input class="w-full pl-10 pr-12 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-slate-900 dark:text-white font-display" placeholder="••••••••" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-primary" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full py-4 bg-primary text-white rounded-lg font-bold text-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 font-display tracking-wide uppercase text-sm" type="submit">
+                                Register Account
+                            </button>
+</div>
+</form>
+<div class="mt-8 text-center">
+<p class="text-slate-500 dark:text-slate-400 font-display">
+                            Already have an account? 
+                            <a class="text-primary hover:underline font-bold ml-1" href="#">Log in here</a>
+</p>
+</div>
+<div class="mt-8 flex items-center justify-center gap-4">
+<div class="h-px bg-slate-200 dark:bg-slate-800 grow"></div>
+<span class="text-xs text-slate-400 uppercase tracking-widest font-display">Or continue with</span>
+<div class="h-px bg-slate-200 dark:bg-slate-800 grow"></div>
+</div>
+<div class="mt-6 grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 py-2 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.9 8.2,4.73 12.2,4.73C15.29,4.73 17.1,6.7 17.1,6.7L19,4.72C19,4.72 16.56,2 12.1,2C6.42,2 2.03,6.8 2.03,12C2.03,17.05 6.16,22 12.25,22C17.6,22 21.5,18.33 21.5,12.91C21.5,11.76 21.35,11.1 21.35,11.1V11.1Z" fill="currentColor"></path>
+</svg>
+<span class="text-sm font-display">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-2 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+<span class="text-sm font-display">Apple</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="px-6 md:px-20 py-8 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4 bg-background-light dark:bg-background-dark">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-display italic">
+                © 2024 Ecos del Alma. Writing the future of literature.
+            </p>
+<div class="flex gap-6 text-sm font-display text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</footer>
+</div>
+</body></html>
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ecos del Alma - Literatura y Pensamiento</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e2b736",
+                        "background-light": "#111827",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }</script>
+<style>
+        body {
+            font-family: 'Newsreader', serif;
+        }
+    </style>
+</head>
+<body class="dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300 bg-slate-950">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 px-6 py-4 lg:px-20 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50 bg-slate-950/80">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-3xl">auto_stories</span>
+<h2 class="dark:text-slate-100 text-xl font-bold tracking-tight text-slate-50">Ecos del Alma</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Books</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Poems</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Thoughts</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden sm:flex items-center bg-slate-200/50 dark:bg-slate-800/50 rounded-lg px-3 py-1.5">
+<span class="material-symbols-outlined text-slate-500 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-32 lg:w-48 placeholder:text-slate-500" placeholder="Search literary works..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">account_circle</button>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="relative px-6 py-12 lg:px-20 lg:py-24">
+<div class="max-w-6xl mx-auto">
+<div class="relative overflow-hidden rounded-xl bg-slate-900 min-h-[500px] flex items-center justify-center text-center p-8 shadow-2xl">
+<div class="absolute inset-0 opacity-40 bg-cover bg-center" data-alt="Old library with dusty sunlight rays" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAW0qprSGe4xUhIQ990YI9REtKvQF9GKZEf-BJt6yYPc2QZA22YkM8YaJX5CxHT9CZJnTMyvEncFQOvIIKXMPjPwpmtDrajkjzAe0QTn0mSueE-tyd8dqRwx0I0WLmAezNFQ6E8pXKh6uRTFdCh5WTasyA_C4eyhqLSNc6MJCeG22Q3WgV2y8GDsPI3WxxX1qMM3xjkhhpxIYW_xWFx0PEiGldb2MKbwthUHtn0-LaT4eNoNPxBi0BNWgSQ7EZGlQweMzb2VJl2_4WQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+<div class="relative z-10 max-w-3xl flex flex-col items-center gap-8">
+<span class="material-symbols-outlined text-primary text-5xl">format_quote</span>
+<h1 class="text-white text-4xl md:text-6xl font-serif italic leading-tight">
+                                    "La poesía no es un lujo, es una necesidad vital que da nombre a lo innombrable."
+                                </h1>
+<p class="text-slate-300 text-lg md:text-xl font-light tracking-wide">
+                                    Bienvenidos a Ecos del Alma, un rincón para la literatura, el pensamiento profundo y la belleza de la palabra escrita.
+                                </p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:brightness-110 transition-all flex items-center gap-2">
+                                        Explorar Poemas <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-3 rounded-lg font-bold hover:bg-white/20 transition-all">
+                                        Nuestra Historia
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+</section><!-- Statistics Section -->
+<section class="px-6 py-8 lg:px-20 border-y border-slate-800 bg-slate-950/50">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="Writer" class="inline-block h-10 w-10 rounded-full ring-2 ring-slate-900 bg-slate-800" src="https://placeholder.pics/svg/300"/>
+<img alt="Writer" class="inline-block h-10 w-10 rounded-full ring-2 ring-slate-900 bg-slate-800" src="https://placeholder.pics/svg/300"/>
+<img alt="Writer" class="inline-block h-10 w-10 rounded-full ring-2 ring-slate-900 bg-slate-800" src="https://placeholder.pics/svg/300"/>
+<div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-slate-900 bg-primary text-[10px] font-bold text-white">+1.2k</div>
+</div>
+<p class="text-slate-300 text-lg">
+<span class="font-bold text-primary">Más de 1,240 escritores</span> ya son parte de <span class="italic font-serif">Ecos del Alma</span>
+</p>
+</div>
+</section>
+<!-- Featured Books Section -->
+<section class="px-6 py-16 lg:px-20 dark:bg-slate-900/50 bg-slate-900/30">
+<div class="max-w-6xl mx-auto">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="text-3xl md:text-4xl font-bold mb-2">Libros Destacados</h2>
+<div class="h-1.5 w-20 bg-primary rounded-full"></div>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 hover:underline" href="#">Ver catálogo <span class="material-symbols-outlined">chevron_right</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Book 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] mb-6 overflow-hidden rounded-lg shadow-lg group-hover:shadow-2xl transition-all duration-500">
+<img alt="Book Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Minimalist book cover titled Sombras del Ayer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAbCAwVC_mGi1pD5shG83DI4ZhtplrQ1Mc0Y2r9xVYULcJ_n1rZgDDjFPHd35gcep6rB4btMlE5-bOIbidFo6VE7Y4NtIazhBACRl_yZGh8PIbP8j07udl5HVQHBktOUOou2XvMCquST0FtNBMtozh6avW5O6Gvz2bQik6Jji4zj3Aamfmy_VT7T3JgUAHpxmUa8xnL2vtAj8nKQ_Hvk9b79RmQp26lCJgUcmqKQ3eTIo1EqIL6R6KDgm3dppBjf6h_yKrPnQO58KS"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Sombras del Ayer</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm italic mb-3">Por Elena Valerio</p>
+<p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">Una exploración íntima de la memoria y el paso del tiempo a través de paisajes olvidados y cartas nunca enviadas.</p>
+</div>
+<!-- Book 2 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] mb-6 overflow-hidden rounded-lg shadow-lg group-hover:shadow-2xl transition-all duration-500">
+<img alt="Book Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Artistic book cover for Cantos al Alba" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfwj_dNHCMi9wDVpWSSobEkGGEewhHcMcZ0QnB1_zt55e7zzsHGmENlybWpBu1K2ez_whf9mgRGQuBdPuhI3cVdhAVgpKO1fTNh1GJP7fognvxBFV-hrY4hOOGbdrQ-wVR1hCAHXEeMPO3ApFHlHmbQnLpo2M8OYO9FlDoeH6yZ166gwZriBbVv5nfM7Oy2u2Aod5mVOT0Cy87scVuHFqUPlMC6b038GCmCN7paEPa8UgWybNCbQHJciiZ1ZmFHgSPVCD6ftez94W4"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Cantos al Alba</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm italic mb-3">Por Marco Tulio</p>
+<p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">Poesía lírica contemporánea que celebra la renovación diaria y el despertar de la conciencia humana.</p>
+</div>
+<!-- Book 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] mb-6 overflow-hidden rounded-lg shadow-lg group-hover:shadow-2xl transition-all duration-500">
+<img alt="Book Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Abstract sand patterns book cover for Versos de Arena" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9kKpVegJz7Sjnyn6mvDfR1TqNXheUOa4LYGYVP0C6C_Bb7qirfhLxzW9QqFi1Lr7W4o7umVNLH6Ye0u356edYWFJJs3o7gtqDUTjGhbTCSiQ6NbAv98dhIShK1_yZUD7JPI2_IrUTUXiIWrk5a3lzHtcv5OBHuNYauhOKN-Q4p5MTtPNJSllfQZlQ0vtAnDIcxIi_ugTHmYfmciB8FEgnzdNtFEOZbujWV-rFEk1ymwZ11Od1ppoG0dRInrVreD9IaoNVCo3U57al"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Versos de Arena</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm italic mb-3">Por Sofía Reyes</p>
+<p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">Relatos cortos de soledad y redención ambientados en las costas infinitas del pensamiento.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Poems Grid -->
+<section class="px-6 py-20 lg:px-20">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4">Últimos Poemas</h2>
+<p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">Nuevas voces y versos que capturan la esencia del momento. Suscríbete para recibir nuestra antología mensual.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Poem Card 1 -->
+<div class="p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:border-primary dark:hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary mb-4 opacity-50">flight</span>
+<h4 class="font-bold text-lg mb-2">El Susurro del Olmo</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm italic mb-4">"Las hojas hablan en un idioma que el viento traduce..."</p>
+<div class="flex items-center justify-between mt-6">
+<span class="text-xs text-slate-400 font-medium">Hace 2 horas</span>
+<button class="text-primary material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</button>
+</div>
+</div>
+<!-- Poem Card 2 -->
+<div class="p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:border-primary dark:hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary mb-4 opacity-50">ink_pen</span>
+<h4 class="font-bold text-lg mb-2">Tinta en la Oscuridad</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm italic mb-4">"Buscamos luz en los trazos de una noche sin luna..."</p>
+<div class="flex items-center justify-between mt-6">
+<span class="text-xs text-slate-400 font-medium">Hace 5 horas</span>
+<button class="text-primary material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</button>
+</div>
+</div>
+<!-- Poem Card 3 -->
+<div class="p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:border-primary dark:hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary mb-4 opacity-50">history_edu</span>
+<h4 class="font-bold text-lg mb-2">Ecos del Mar</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm italic mb-4">"Cada ola es un verso que la arena intenta retener..."</p>
+<div class="flex items-center justify-between mt-6">
+<span class="text-xs text-slate-400 font-medium">Ayer</span>
+<button class="text-primary material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</button>
+</div>
+</div>
+<!-- Poem Card 4 -->
+<div class="p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:border-primary dark:hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary mb-4 opacity-50">menu_book</span>
+<h4 class="font-bold text-lg mb-2">Páginas de Invierno</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm italic mb-4">"El frío cristaliza los recuerdos en párrafos blancos..."</p>
+<div class="flex items-center justify-between mt-6">
+<span class="text-xs text-slate-400 font-medium">Hace 3 días</span>
+<button class="text-primary material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="text-slate-400 px-6 py-12 lg:px-20 border-t border-slate-800 bg-slate-950">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-primary">auto_stories</span>
+<span class="font-bold text-lg">Ecos del Alma</span>
+</div>
+<div class="flex gap-8 text-sm">
+<a class="hover:text-white transition-colors" href="#">Privacidad</a>
+<a class="hover:text-white transition-colors" href="#">Contacto</a>
+<a class="hover:text-white transition-colors" href="#">Newsletter</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">mail</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">rss_feed</span>
+</div>
+</div>
+<div class="max-w-6xl mx-auto mt-8 pt-8 border-t border-slate-800 text-center text-xs">
+<p>© 2024 Ecos del Alma. Un rincón para los amantes de las letras.</p>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ecos del Alma - Literatura y Pensamiento</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e2b736",
+                        "background-light": "#111827",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }</script>
+<style>
+        body {
+            font-family: 'Newsreader', serif;
+        }
+    </style>
+</head>
+<body class="dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300 bg-slate-950">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 px-6 py-4 lg:px-20 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50 bg-slate-950/80">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-3xl">auto_stories</span>
+<h2 class="dark:text-slate-100 text-xl font-bold tracking-tight text-slate-50">Ecos del Alma</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Books</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Poems</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Thoughts</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden sm:flex items-center bg-slate-200/50 dark:bg-slate-800/50 rounded-lg px-3 py-1.5">
+<span class="material-symbols-outlined text-slate-500 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-32 lg:w-48 placeholder:text-slate-500" placeholder="Search literary works..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">account_circle</button>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="relative px-6 py-12 lg:px-20 lg:py-24">
+<div class="max-w-6xl mx-auto">
+<div class="relative overflow-hidden rounded-xl bg-slate-900 min-h-[500px] flex items-center justify-center text-center p-8 shadow-2xl">
+<div class="absolute inset-0 opacity-40 bg-cover bg-center" data-alt="Old library with dusty sunlight rays" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAW0qprSGe4xUhIQ990YI9REtKvQF9GKZEf-BJt6yYPc2QZA22YkM8YaJX5CxHT9CZJnTMyvEncFQOvIIKXMPjPwpmtDrajkjzAe0QTn0mSueE-tyd8dqRwx0I0WLmAezNFQ6E8pXKh6uRTFdCh5WTasyA_C4eyhqLSNc6MJCeG22Q3WgV2y8GDsPI3WxxX1qMM3xjkhhpxIYW_xWFx0PEiGldb2MKbwthUHtn0-LaT4eNoNPxBi0BNWgSQ7EZGlQweMzb2VJl2_4WQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+<div class="relative z-10 max-w-3xl flex flex-col items-center gap-8">
+<span class="material-symbols-outlined text-primary text-5xl">format_quote</span>
+<h1 class="text-white text-4xl md:text-6xl font-serif italic leading-tight">
+                                    "La poesía no es un lujo, es una necesidad vital que da nombre a lo innombrable."
+                                </h1>
+<p class="text-slate-300 text-lg md:text-xl font-light tracking-wide">
+                                    Bienvenidos a Ecos del Alma, un rincón para la literatura, el pensamiento profundo y la belleza de la palabra escrita.
+                                </p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:brightness-110 transition-all flex items-center gap-2">
+                                        Explorar Poemas <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-3 rounded-lg font-bold hover:bg-white/20 transition-all">
+                                        Nuestra Historia
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Books Section -->
+<section class="px-6 py-16 lg:px-20 dark:bg-slate-900/50 bg-slate-900/30">
+<div class="max-w-6xl mx-auto">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="text-3xl md:text-4xl font-bold mb-2">Libros Destacados</h2>
+<div class="h-1.5 w-20 bg-primary rounded-full"></div>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 hover:underline" href="#">Ver catálogo <span class="material-symbols-outlined">chevron_right</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Book 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] mb-6 overflow-hidden rounded-lg shadow-lg group-hover:shadow-2xl transition-all duration-500">
+<img alt="Book Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Minimalist book cover titled Sombras del Ayer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAbCAwVC_mGi1pD5shG83DI4ZhtplrQ1Mc0Y2r9xVYULcJ_n1rZgDDjFPHd35gcep6rB4btMlE5-bOIbidFo6VE7Y4NtIazhBACRl_yZGh8PIbP8j07udl5HVQHBktOUOou2XvMCquST0FtNBMtozh6avW5O6Gvz2bQik6Jji4zj3Aamfmy_VT7T3JgUAHpxmUa8xnL2vtAj8nKQ_Hvk9b79RmQp26lCJgUcmqKQ3eTIo1EqIL6R6KDgm3dppBjf6h_yKrPnQO58KS"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Sombras del Ayer</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm italic mb-3">Por Elena Valerio</p>
+<p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">Una exploración íntima de la memoria y el paso del tiempo a través de paisajes olvidados y cartas nunca enviadas.</p>
+</div>
+<!-- Book 2 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] mb-6 overflow-hidden rounded-lg shadow-lg group-hover:shadow-2xl transition-all duration-500">
+<img alt="Book Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Artistic book cover for Cantos al Alba" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfwj_dNHCMi9wDVpWSSobEkGGEewhHcMcZ0QnB1_zt55e7zzsHGmENlybWpBu1K2ez_whf9mgRGQuBdPuhI3cVdhAVgpKO1fTNh1GJP7fognvxBFV-hrY4hOOGbdrQ-wVR1hCAHXEeMPO3ApFHlHmbQnLpo2M8OYO9FlDoeH6yZ166gwZriBbVv5nfM7Oy2u2Aod5mVOT0Cy87scVuHFqUPlMC6b038GCmCN7paEPa8UgWybNCbQHJciiZ1ZmFHgSPVCD6ftez94W4"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Cantos al Alba</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm italic mb-3">Por Marco Tulio</p>
+<p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">Poesía lírica contemporánea que celebra la renovación diaria y el despertar de la conciencia humana.</p>
+</div>
+<!-- Book 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] mb-6 overflow-hidden rounded-lg shadow-lg group-hover:shadow-2xl transition-all duration-500">
+<img alt="Book Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Abstract sand patterns book cover for Versos de Arena" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9kKpVegJz7Sjnyn6mvDfR1TqNXheUOa4LYGYVP0C6C_Bb7qirfhLxzW9QqFi1Lr7W4o7umVNLH6Ye0u356edYWFJJs3o7gtqDUTjGhbTCSiQ6NbAv98dhIShK1_yZUD7JPI2_IrUTUXiIWrk5a3lzHtcv5OBHuNYauhOKN-Q4p5MTtPNJSllfQZlQ0vtAnDIcxIi_ugTHmYfmciB8FEgnzdNtFEOZbujWV-rFEk1ymwZ11Od1ppoG0dRInrVreD9IaoNVCo3U57al"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Versos de Arena</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm italic mb-3">Por Sofía Reyes</p>
+<p class="text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">Relatos cortos de soledad y redención ambientados en las costas infinitas del pensamiento.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Poems Grid -->
+<section class="px-6 py-20 lg:px-20">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4">Últimos Poemas</h2>
+<p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">Nuevas voces y versos que capturan la esencia del momento. Suscríbete para recibir nuestra antología mensual.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Poem Card 1 -->
+<div class="p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:border-primary dark:hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary mb-4 opacity-50">flight</span>
+<h4 class="font-bold text-lg mb-2">El Susurro del Olmo</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm italic mb-4">"Las hojas hablan en un idioma que el viento traduce..."</p>
+<div class="flex items-center justify-between mt-6">
+<span class="text-xs text-slate-400 font-medium">Hace 2 horas</span>
+<button class="text-primary material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</button>
+</div>
+</div>
+<!-- Poem Card 2 -->
+<div class="p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:border-primary dark:hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary mb-4 opacity-50">ink_pen</span>
+<h4 class="font-bold text-lg mb-2">Tinta en la Oscuridad</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm italic mb-4">"Buscamos luz en los trazos de una noche sin luna..."</p>
+<div class="flex items-center justify-between mt-6">
+<span class="text-xs text-slate-400 font-medium">Hace 5 horas</span>
+<button class="text-primary material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</button>
+</div>
+</div>
+<!-- Poem Card 3 -->
+<div class="p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:border-primary dark:hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary mb-4 opacity-50">history_edu</span>
+<h4 class="font-bold text-lg mb-2">Ecos del Mar</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm italic mb-4">"Cada ola es un verso que la arena intenta retener..."</p>
+<div class="flex items-center justify-between mt-6">
+<span class="text-xs text-slate-400 font-medium">Ayer</span>
+<button class="text-primary material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</button>
+</div>
+</div>
+<!-- Poem Card 4 -->
+<div class="p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:border-primary dark:hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary mb-4 opacity-50">menu_book</span>
+<h4 class="font-bold text-lg mb-2">Páginas de Invierno</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm italic mb-4">"El frío cristaliza los recuerdos en párrafos blancos..."</p>
+<div class="flex items-center justify-between mt-6">
+<span class="text-xs text-slate-400 font-medium">Hace 3 días</span>
+<button class="text-primary material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="text-slate-400 px-6 py-12 lg:px-20 border-t border-slate-800 bg-slate-950">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-primary">auto_stories</span>
+<span class="font-bold text-lg">Ecos del Alma</span>
+</div>
+<div class="flex gap-8 text-sm">
+<a class="hover:text-white transition-colors" href="#">Privacidad</a>
+<a class="hover:text-white transition-colors" href="#">Contacto</a>
+<a class="hover:text-white transition-colors" href="#">Newsletter</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">mail</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">rss_feed</span>
+</div>
+</div>
+<div class="max-w-6xl mx-auto mt-8 pt-8 border-t border-slate-800 text-center text-xs">
+<p>© 2024 Ecos del Alma. Un rincón para los amantes de las letras.</p>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PoetryHaven | Explore Poems</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#e2b736",
+                "background-light": "#f6f6f8",
+                "background-dark": "#111621",
+              },
+              fontFamily: {
+                "display": ["Newsreader", "serif"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "0.5rem", "xl": "0.5rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+        body {
+            font-family: 'Newsreader', serif;
+        }
+    </style>
+</head>
+<body class="dark:bg-background-dark text-slate-900 dark:text-slate-100 bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Navigation -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 sticky top-0 dark:bg-background-dark/80 backdrop-blur-md z-50 bg-background-dark/80">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl">fluid</span>
+<h2 class="text-xl font-bold tracking-tight">PoetryHaven</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-bold text-primary border-b-2 border-primary" href="#">Poems</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Authors</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Collections</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden sm:flex items-center bg-slate-200/50 dark:bg-slate-800/50 rounded-lg px-3 py-1.5">
+<span class="material-symbols-outlined text-slate-500 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-40 placeholder:text-slate-500" placeholder="Search verses..." type="text"/>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full px-6 md:px-20 py-12">
+<div class="flex flex-col lg:flex-row gap-16">
+<!-- Sidebar: Categories -->
+<aside class="w-full lg:w-64 flex flex-col gap-10">
+<section>
+<h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">Explore Themes</h3>
+<div class="flex flex-col gap-1">
+<a class="group flex items-center justify-between p-3 rounded-lg bg-primary text-black" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+<span class="text-base font-medium">All Poems</span>
+</div>
+<span class="text-xs font-bold">124</span>
+</a>
+<a class="group flex items-center justify-between p-3 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-pink-500">favorite</span>
+<span class="text-base font-medium">Romance</span>
+</div>
+<span class="text-xs text-slate-500">42</span>
+</a>
+<a class="group flex items-center justify-between p-3 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-green-600">park</span>
+<span class="text-base font-medium">Nature</span>
+</div>
+<span class="text-xs text-slate-500">31</span>
+</a>
+<a class="group flex items-center justify-between p-3 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-amber-600">psychology</span>
+<span class="text-base font-medium">Philosophy</span>
+</div>
+<span class="text-xs text-slate-500">28</span>
+</a>
+<a class="group flex items-center justify-between p-3 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-indigo-500">history_edu</span>
+<span class="text-base font-medium">Classical</span>
+</div>
+<span class="text-xs text-slate-500">23</span>
+</a>
+</div>
+</section>
+<section class="p-6 rounded-xl bg-primary/10 border border-primary/20">
+<h4 class="text-base font-bold text-primary mb-2">Poem of the Day</h4>
+<p class="italic text-slate-300 text-sm leading-relaxed mb-4">
+                        "The woods are lovely, dark and deep, 
+                        But I have promises to keep..."
+                    </p>
+<span class="text-xs font-medium text-slate-500">— Robert Frost</span>
+</section>
+</aside>
+<!-- Main Content: Poem List -->
+<section class="flex-1">
+<div class="flex items-center justify-between mb-12">
+<div>
+<h1 class="text-4xl font-bold tracking-tight mb-2">Recent Verses</h1>
+<p class="text-slate-500 italic">Discover the latest voices in modern poetry.</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-12">
+<!-- Poem Entry 1 -->
+<article class="group cursor-pointer">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+<div>
+<h2 class="text-2xl font-bold group-hover:text-primary transition-colors leading-snug">The Silent Echoes of Dawn</h2>
+<p class="text-sm text-slate-500 mt-1 text-slate-300">By <span class="text-primary font-medium">Elena Thorne</span> • Nature</p>
+</div>
+<span class="text-xs font-mono uppercase tracking-widest text-slate-400 mt-1">Oct 24, 2023</span>
+</div>
+<p class="text-lg leading-relaxed dark:text-slate-300 font-serif italic mb-6 max-w-2xl border-l-2 border-primary/20 pl-6 text-slate-300">
+                            "Before the gold spills over the crest, 
+                            the world holds its breath in silver grey. 
+                            Not a bird dares to break the chest 
+                            of silence that the night mislaid..."
+                        </p>
+<div class="flex items-center gap-6">
+<button class="text-sm font-bold text-primary hover:underline flex items-center gap-1">
+                                Read full poem <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<div class="flex items-center gap-4 text-slate-400">
+<span class="flex items-center gap-1 text-xs"><span class="material-symbols-outlined text-sm">favorite</span> 128</span>
+<span class="flex items-center gap-1 text-xs"><span class="material-symbols-outlined text-sm">chat_bubble</span> 14</span>
+</div>
+</div>
+<hr class="mt-12 dark:border-slate-900 border-slate-800"/>
+</article>
+<!-- Poem Entry 2 -->
+<article class="group cursor-pointer">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+<div>
+<h2 class="text-2xl font-bold group-hover:text-primary transition-colors leading-snug">Metaphysics of a Tea Cup</h2>
+<p class="text-sm text-slate-500 mt-1 text-slate-300">By <span class="text-primary font-medium">Julian Vane</span> • Philosophy</p>
+</div>
+<span class="text-xs font-mono uppercase tracking-widest text-slate-400 mt-1">Oct 22, 2023</span>
+</div>
+<p class="text-lg leading-relaxed dark:text-slate-300 font-serif italic mb-6 max-w-2xl border-l-2 border-primary/20 pl-6 text-slate-300">
+                            "Circular logic in a porcelain rim,
+                            trapping the steam of yesterday's regret.
+                            We sip the abyss until the light grows dim,
+                            and wonder if the bottom has been met..."
+                        </p>
+<div class="flex items-center gap-6">
+<button class="text-sm font-bold text-primary hover:underline flex items-center gap-1">
+                                Read full poem <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<div class="flex items-center gap-4 text-slate-400">
+<span class="flex items-center gap-1 text-xs"><span class="material-symbols-outlined text-sm">favorite</span> 89</span>
+<span class="flex items-center gap-1 text-xs"><span class="material-symbols-outlined text-sm">chat_bubble</span> 8</span>
+</div>
+</div>
+<hr class="mt-12 dark:border-slate-900 border-slate-800"/>
+</article>
+<!-- Poem Entry 3 -->
+<article class="group cursor-pointer">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+<div>
+<h2 class="text-2xl font-bold group-hover:text-primary transition-colors leading-snug">Unwritten Letters</h2>
+<p class="text-sm text-slate-500 mt-1 text-slate-300">By <span class="text-primary font-medium">Sarah Jenkins</span> • Romance</p>
+</div>
+<span class="text-xs font-mono uppercase tracking-widest text-slate-400 mt-1">Oct 19, 2023</span>
+</div>
+<p class="text-lg leading-relaxed dark:text-slate-300 font-serif italic mb-6 max-w-2xl border-l-2 border-primary/20 pl-6 text-slate-300">
+                            "The ink remained within the glass,
+                            frozen by the fear of your reply.
+                            Seasons of words were allowed to pass,
+                            while we lived a quiet, scripted lie..."
+                        </p>
+<div class="flex items-center gap-6">
+<button class="text-sm font-bold text-primary hover:underline flex items-center gap-1">
+                                Read full poem <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<div class="flex items-center gap-4 text-slate-400">
+<span class="flex items-center gap-1 text-xs"><span class="material-symbols-outlined text-sm">favorite</span> 215</span>
+<span class="flex items-center gap-1 text-xs"><span class="material-symbols-outlined text-sm">chat_bubble</span> 32</span>
+</div>
+</div>
+</article>
+<!-- Pagination -->
+<div class="mt-12 flex items-center justify-center gap-4">
+<button class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400 cursor-not-allowed">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold text-black">1</button>
+<button class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center font-medium">2</button>
+<button class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center font-medium">3</button>
+<button class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12 px-6 md:px-20 mt-20 bg-slate-950">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2 text-primary opacity-80">
+<span class="material-symbols-outlined text-2xl">fluid</span>
+<h2 class="text-lg font-bold tracking-tight">PoetryHaven</h2>
+</div>
+<div class="flex gap-8 text-sm text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Submit Verse</a>
+<a class="hover:text-primary transition-colors" href="#">About Us</a>
+</div>
+<p class="text-xs text-slate-400">© 2023 PoetryHaven. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</body></html>
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#e2b736",
+              "background-light": "#f6f6f8",
+              "background-dark": "#0d0f14",
+            },
+            fontFamily: {
+              "display": ["Newsreader", "serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }</script>
+<style>
+        body {
+            font-family: 'Newsreader', serif;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-slate-200 min-h-screen font-['Newsreader']">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="mx-auto w-full max-w-[1200px] px-4 md:px-10 py-5">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid dark:border-slate-800 pb-6 mb-8 border-slate-800">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">auto_stories</span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight">Reflections</h1>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8">
+<label class="hidden md:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded h-full dark:bg-slate-800/50 bg-slate-800/80">
+<div class="text-slate-500 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 placeholder:text-slate-500 text-base font-normal" placeholder="Search entries..." value=""/>
+</div>
+</label>
+<button class="flex items-center justify-center rounded h-10 w-10 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 bg-slate-800/80">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="flex items-center justify-center rounded h-10 w-10 bg-primary text-white">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</header>
+<nav class="mb-10">
+<div class="flex border-b dark:border-slate-800 gap-8 overflow-x-auto no-scrollbar border-slate-800">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-slate-900 dark:text-slate-100 pb-3" href="#">
+<p class="text-sm font-bold tracking-wide">All Entries</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 pb-3" href="#">
+<p class="text-sm font-bold tracking-wide">Personal</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 pb-3" href="#">
+<p class="text-sm font-bold tracking-wide">Philosophy</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 pb-3" href="#">
+<p class="text-sm font-bold tracking-wide">Nature</p>
+</a>
+</div>
+</nav>
+<main>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="flex flex-col gap-4 rounded-xl p-8 bg-slate-900/50 border border-slate-800 shadow-sm hover:border-primary/30 transition-all">
+<p class="text-xl italic leading-relaxed text-slate-200 font-display">
+                            "The silence of the early morning is where I find my truest self. Before the world wakes up with its demands, there is a space of pure potential."
+                        </p>
+<div class="mt-4 flex items-center justify-between border-t border-slate-800 pt-4">
+<span class="text-xs font-medium text-slate-500 uppercase tracking-widest">October 24, 2023</span>
+<div class="flex gap-4">
+<button class="text-slate-500 hover:text-primary transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">favorite</span>
+<span class="text-xs font-bold">24</span>
+</button>
+<button class="text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl p-8 bg-primary/10 border border-primary/20 shadow-sm">
+<p class="text-xl italic leading-relaxed text-slate-100 font-display">
+                            "Progress is not a straight line, but a series of loops. We often revisit the same challenges, but each time with a deeper understanding."
+                        </p>
+<div class="mt-4 flex items-center justify-between border-t border-primary/20 pt-4">
+<span class="text-xs font-medium text-primary/70 uppercase tracking-widest">October 20, 2023</span>
+<div class="flex gap-4">
+<button class="text-primary hover:text-primary transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">favorite</span>
+<span class="text-xs font-bold">18</span>
+</button>
+<button class="text-primary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl p-8 bg-slate-900/50 border border-slate-800 shadow-sm hover:border-primary/30 transition-all">
+<p class="text-xl italic leading-relaxed text-slate-200 font-display">
+                            "Kindness is a language that the deaf can hear and the blind can see. It requires no translation, only presence."
+                        </p>
+<div class="mt-4 flex items-center justify-between border-t border-slate-800 pt-4">
+<span class="text-xs font-medium text-slate-500 uppercase tracking-widest">October 15, 2023</span>
+<div class="flex gap-4">
+<button class="text-slate-500 hover:text-primary transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">favorite</span>
+<span class="text-xs font-bold">56</span>
+</button>
+<button class="text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl p-8 bg-slate-900/50 border border-slate-800 shadow-sm hover:border-primary/30 transition-all">
+<p class="text-xl italic leading-relaxed text-slate-200 font-display">
+                            "Every sunset is an opportunity to reset. To let go of what didn't serve us today and prepare for the light of tomorrow."
+                        </p>
+<div class="mt-4 flex items-center justify-between border-t border-slate-800 pt-4">
+<span class="text-xs font-medium text-slate-500 uppercase tracking-widest">October 12, 2023</span>
+<div class="flex gap-4">
+<button class="text-slate-500 hover:text-primary transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">favorite</span>
+<span class="text-xs font-bold">31</span>
+</button>
+<button class="text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl p-8 bg-slate-900/50 border border-slate-800 shadow-sm hover:border-primary/30 transition-all">
+<div class="w-full aspect-video rounded overflow-hidden mb-4 bg-slate-800">
+<img class="w-full h-full object-cover opacity-80" data-alt="Close up of dew drops on a leaf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjL5luvwYKxLLaHXzKtFNl7ypP-gM1PwAYrx9yJtvBFltWcyyxFE3dc-N1yKfDYZxFy62NWyhUlahOWMUbQ1KAx8nfLnZ2jN9khNgRVMyCpmZ7LOnsTtlkJXHAkzDDwAT8MNjUMSO36tT-EvX8Xsh2yu4j8v-B1r9AjZUR7uTd0jr1iYX_a5laF3-jN4zy8LTgVVHE84gePelZph8oUmf_e4OtxkSP9h6uGx90mv984yUKcl3q9N2hl1Nvxw1EEdDLDSvk2cnw9Ubh"/>
+</div>
+<p class="text-xl italic leading-relaxed text-slate-200 font-display">
+                            "Focus on the breath, the rest will follow. The mind is a storm, but the breath is the anchor."
+                        </p>
+<div class="mt-4 flex items-center justify-between border-t border-slate-800 pt-4">
+<span class="text-xs font-medium text-slate-500 uppercase tracking-widest">October 08, 2023</span>
+<div class="flex gap-4">
+<button class="text-slate-500 hover:text-primary transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">favorite</span>
+<span class="text-xs font-bold">42</span>
+</button>
+<button class="text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl p-8 bg-slate-900/50 border border-slate-800 shadow-sm hover:border-primary/30 transition-all">
+<p class="text-xl italic leading-relaxed text-slate-200 font-display">
+                            "Words have the power to change the shape of reality. Choose them with the same care an artist chooses their palette."
+                        </p>
+<div class="mt-4 flex items-center justify-between border-t border-slate-800 pt-4">
+<span class="text-xs font-medium text-slate-500 uppercase tracking-widest">October 05, 2023</span>
+<div class="flex gap-4">
+<button class="text-slate-500 hover:text-primary transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">favorite</span>
+<span class="text-xs font-bold">12</span>
+</button>
+<button class="text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+</div>
+</div>
+</div></div>
+</main>
+<div class="fixed bottom-8 right-8 z-50">
+<button class="flex items-center justify-center rounded-full h-14 w-14 bg-primary text-white shadow-xl hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">edit</span>
+</button>
+</div>
+<footer class="mt-20 border-t dark:border-slate-800 py-10 flex flex-col md:flex-row justify-between items-center gap-6 border-slate-800">
+<div class="flex items-center gap-2 text-slate-500">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="text-sm font-bold uppercase tracking-widest">Reflections Journal</span>
+</div>
+<div class="flex gap-6 text-sm text-slate-500 font-medium">
+<a class="hover:text-primary" href="#">Archive</a>
+<a class="hover:text-primary" href="#">Privacy</a>
+<a class="hover:text-primary" href="#">Export</a>
+</div>
+<div class="text-xs text-slate-400">
+                    © 2024 Minimalist Notebook
+                </div>
+</footer>
+</div>
+</div>
+</div>
+</body></html>
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1754cf",
+                        "accent": "#f59e0b",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0a0e17",
+                        "surface-dark": "#161c2d",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Newsreader', serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 px-6 py-4 lg:px-20 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary dark:text-accent">
+<span class="material-symbols-outlined text-3xl">auto_stories</span>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Ecos del Alma</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-accent text-sm font-medium transition-colors" href="#">Inicio</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-accent text-sm font-medium transition-colors" href="#">Poemas</a>
+<a class="text-primary dark:text-accent text-sm font-bold border-b-2 border-primary dark:border-accent pb-1" href="#">Concursos</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-accent text-sm font-medium transition-colors" href="#">Biblioteca</a>
+</nav>
+</div>
+<div class="flex items-center gap-4 lg:gap-6">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+<input class="bg-slate-100 dark:bg-surface-dark border-none rounded-lg pl-10 pr-4 py-2 text-sm w-48 lg:w-64 focus:ring-2 focus:ring-primary dark:focus:ring-accent" placeholder="Buscar certámenes..." type="text"/>
+</div>
+<button class="p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-accent rounded-full"></span>
+</button>
+<div class="h-10 w-10 rounded-full overflow-hidden border-2 border-primary dark:border-accent">
+<img class="w-full h-full object-cover" data-alt="Avatar de perfil de usuario" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8ju9ue7sNBA12JKr_TO-3pxXGswIGNjP8mpOsHNJbv_GQs2P6s8eI2peDgYLY-eGGjZLCMNxYpPN2IBPqIuAdc0seAM_ECLj0Jj_tL-Ta24masGXPuUhcsopKcMI23xir_qcWO8inWja4_TND6Ch_B5Zlnwq4SZapDxfmIfsqnfnnv3eZrx8JFAJ5Ct_Uy4oqho0cgAGTElnZ2MkyFhokXlLCrPqdN_C6iocNz7lmJ-gmtGZU6LHbWv_JzLxNoZEWo6j_X4i-8C5Q"/>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full px-4 py-8 lg:px-8 space-y-12">
+<!-- Hero: Current Contest -->
+<section class="relative rounded-xl overflow-hidden bg-surface-dark border border-slate-800">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="Paisaje brumoso de montañas al atardecer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxr5_dAVOz290J0-XmI5fmemuVVT4DKV0IJt1cF1kFtsSfBUDJAgRoKy9TUy0gJu-X6bG1WUZbZblJYDL4DhQIr9IVzFFaAC3VppNEvYMIFXfb5L4eX00_w7PdkZEQbM-Bv-AErVxFqTrvzayhLrVDVwgMmjW09jVfQLYiUIn5F3uHbVNg4r2EWE22FX22JQ1UW530-Bo9bUVcaZQSoht_gJEnyQJbgwNTby47JQTHjq_-SwlB4iniQ8PR-6gSUI2Y8gPMSAkkp7vw"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent"></div>
+</div>
+<div class="relative z-10 px-8 py-16 lg:px-16 lg:py-24 max-w-2xl space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 border border-accent/40 text-accent text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">event</span> Concurso del Mes
+                    </div>
+<h1 class="text-4xl lg:text-6xl font-display font-bold leading-tight text-white italic">Susurros del Otoño</h1>
+<p class="text-slate-300 text-lg leading-relaxed font-display italic">
+                        "En cada hoja que cae, un verso se desprende". Participa con tu obra más profunda sobre la melancolía y el cambio estacional.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-accent hover:bg-amber-600 text-background-dark px-8 py-3 rounded-lg font-bold text-lg transition-all flex items-center gap-2">
+<span class="material-symbols-outlined">ink_pen</span> Participar Ahora
+                        </button>
+<button class="bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm px-8 py-3 rounded-lg font-bold text-lg transition-all">
+                            Bases del Concurso
+                        </button>
+</div>
+<div class="pt-6 flex items-center gap-6 text-slate-400 text-sm">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-accent">schedule</span> Cierra en 12 días</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-accent">military_tech</span> Premio: 500 Fichas de Alma</span>
+</div>
+</div>
+</section>
+<!-- Gallery & Leaderboard Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Entries Gallery -->
+<div class="lg:col-span-2 space-y-6">
+<div class="flex items-center justify-between border-b border-slate-800 pb-4">
+<h2 class="text-2xl font-display font-bold text-slate-100 italic">Galería de Participantes</h2>
+<div class="flex items-center gap-4 text-sm">
+<span class="text-slate-400 italic">Ordenar por:</span>
+<select class="bg-transparent border-none text-accent focus:ring-0 cursor-pointer font-bold">
+<option>Más Votados</option>
+<option>Recientes</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Entry Card 1 -->
+<div class="bg-surface-dark border border-slate-800 rounded-xl p-6 flex flex-col justify-between hover:border-accent/40 transition-all group">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Retrato de poeta mujer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj01Egn_uHileBdp2wEL3REYfTlbbGwu7_7l4eTC4I7jPAXJrcMO16DCgFLA-KrXrXwUcmEIHXSDy5sqrNgrncjKhpn-gqWkzXHEeNKBwjkND_t8U9WkmN0_QST22tTQ0pXYURVbPNFpH1sRYEya9dQ0lLltExMTaMcKO6ias3Dc1t9LLFbppUjVAiUtt5zGVUg4ro39VtB1JNy0Y6d1YdVpUqpMSxWDfey6G6ZAcF0nkG0XM3Ts2FMfNfYCGXslcVBg_IzgdhuuZY"/>
+</div>
+<span class="text-slate-400 text-xs font-medium italic">Clara del Bosque</span>
+</div>
+<h3 class="text-xl font-display font-bold text-slate-100 group-hover:text-accent transition-colors">Noche Estrellada</h3>
+<p class="text-slate-400 text-sm italic line-clamp-4 font-display leading-relaxed">
+                                    "La noche se viste de gala con hilos de plata, mientras el viento susurra secretos que solo el silencio comprende..."
+                                </p>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<button class="flex items-center gap-2 text-accent group/btn">
+<span class="material-symbols-outlined group-hover/btn:fill-icon transition-all">vital_signs</span>
+<span class="text-sm font-bold">Votar Alma</span>
+</button>
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">favorite</span> 128 Votos
+                                </span>
+</div>
+</div>
+<!-- Entry Card 2 -->
+<div class="bg-surface-dark border border-slate-800 rounded-xl p-6 flex flex-col justify-between hover:border-accent/40 transition-all group">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Retrato de poeta hombre" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxt-yMiDa_ixkFhOnYFH2GbR79TSvotwCazcVml5i2bAnSW8xECHizvjsgOGV6fTmf-tdF4oFzgUdURvSZ-e_N10um-ezZttIxCjD1abiJ65d-Nu9qVWM1S2qAU_IopuFUEhuafy5wpqM4v_gvBVWu6Zd9cuno0kc4GoVf5RWLbVzj5g7ymdHnFjxf_xM0OKd5dv0bhPAl9lIIS0LxFAngmK855P58IcxVqG2JHOTSzS7eK-AsvhHzWp4lhpCKTig-MOIcc8b4EsR6"/>
+</div>
+<span class="text-slate-400 text-xs font-medium italic">Julián Sombras</span>
+</div>
+<h3 class="text-xl font-display font-bold text-slate-100 group-hover:text-accent transition-colors">El Olvido</h3>
+<p class="text-slate-400 text-sm italic line-clamp-4 font-display leading-relaxed">
+                                    "Arena entre los dedos, el tiempo se nos va, dejando solo el eco de una voz que ya no volverá a sonar en este valle..."
+                                </p>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<button class="flex items-center gap-2 text-accent group/btn">
+<span class="material-symbols-outlined group-hover/btn:fill-icon transition-all">vital_signs</span>
+<span class="text-sm font-bold">Votar Alma</span>
+</button>
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">favorite</span> 94 Votos
+                                </span>
+</div>
+</div>
+<!-- Entry Card 3 -->
+<div class="bg-surface-dark border border-slate-800 rounded-xl p-6 flex flex-col justify-between hover:border-accent/40 transition-all group">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Retrato de joven poeta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxXFEwH-YzBCF1ZFdbFmaOcqHRmrC-MCLW0N-6msuWtAbgPH4KtnVBIxx2Pj490JqWcSFdb7X23qaFB6N8fuEJkk8q12XYhuUhOPzssRWDQRpgOtEXt0yafursFfLPH2ZFfAQmmjU9OO53fCHz5wCjzHvaE4dCvGxL1WGuQL04XRl-p854n9DCSBWM42EhWtIc7sKoGTQq0k2s1gLEFuQ3Z8HDQn2mJf_VD3xJRGW5E7_FpCmBrPE607clV9QAtc_Iw15NI3-l0L9Q"/>
+</div>
+<span class="text-slate-400 text-xs font-medium italic">Sofía Etérea</span>
+</div>
+<h3 class="text-xl font-display font-bold text-slate-100 group-hover:text-accent transition-colors">Raíces del Alma</h3>
+<p class="text-slate-400 text-sm italic line-clamp-4 font-display leading-relaxed">
+                                    "Profundo donde la tierra abraza el origen, allí crecen los sueños que no temen a la tormenta ni al paso de los siglos..."
+                                </p>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<button class="flex items-center gap-2 text-accent group/btn">
+<span class="material-symbols-outlined group-hover/btn:fill-icon transition-all">vital_signs</span>
+<span class="text-sm font-bold">Votar Alma</span>
+</button>
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">favorite</span> 76 Votos
+                                </span>
+</div>
+</div>
+<!-- Entry Card 4 -->
+<div class="bg-surface-dark border border-slate-800 rounded-xl p-6 flex flex-col justify-between hover:border-accent/40 transition-all group">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Retrato de poeta veterano" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6WCbXJP0smO15oLCxaNDTYuTfeyIm7WFJzZoo7fJUBOCy3KlHIkYwYRPmvNs9LkgaSGC8zcpUnhhldxwn12ew1Dk1i9mOqQItBkTxWvc_ojaRky1xW1Gu-8CAxJA9etqBVn-2oobsMsQm7mdIXvCvcyM6EUABaqXEJG392U8P-v-xwq-uZovU0nienILUwUTP9Io_USX6AUNJ4hlB510jioJwKghajBlaR8grjHsaXoMptu3TMcXpaT3iyE8p4TsKguVi0IODA7X9"/>
+</div>
+<span class="text-slate-400 text-xs font-medium italic">Maese Antiguo</span>
+</div>
+<h3 class="text-xl font-display font-bold text-slate-100 group-hover:text-accent transition-colors">Silencio Blanco</h3>
+<p class="text-slate-400 text-sm italic line-clamp-4 font-display leading-relaxed">
+                                    "Cuando la nieve cubra los campos del recuerdo, solo quedará el blanco inmenso de lo que nunca se dijo..."
+                                </p>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<button class="flex items-center gap-2 text-accent group/btn">
+<span class="material-symbols-outlined group-hover/btn:fill-icon transition-all">vital_signs</span>
+<span class="text-sm font-bold">Votar Alma</span>
+</button>
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">favorite</span> 210 Votos
+                                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Leaderboard / Winners -->
+<aside class="space-y-8">
+<div class="bg-surface-dark border border-slate-800 rounded-xl p-6 space-y-6">
+<h2 class="text-xl font-display font-bold text-slate-100 italic border-b border-slate-800 pb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-accent">workspace_premium</span> Salón de la Fama
+                        </h2>
+<div class="space-y-4">
+<!-- Winner 1 -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-accent/5 border border-accent/10">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-display font-bold text-accent">1</span>
+<div>
+<p class="text-sm font-bold text-slate-100">Marco Aurelio</p>
+<p class="text-xs text-slate-500 italic">"Caminos de Hierro"</p>
+</div>
+</div>
+<span class="text-xs font-bold text-accent">1,240 Almas</span>
+</div>
+<!-- Winner 2 -->
+<div class="flex items-center justify-between p-3 rounded-lg hover:bg-slate-800 transition-colors">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-display font-bold text-slate-400">2</span>
+<div>
+<p class="text-sm font-bold text-slate-100">Elena de Troya</p>
+<p class="text-xs text-slate-500 italic">"Mar de Cristal"</p>
+</div>
+</div>
+<span class="text-xs font-medium text-slate-400">980 Almas</span>
+</div>
+<!-- Winner 3 -->
+<div class="flex items-center justify-between p-3 rounded-lg hover:bg-slate-800 transition-colors">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-display font-bold text-slate-600">3</span>
+<div>
+<p class="text-sm font-bold text-slate-100">Sombra Fugaz</p>
+<p class="text-xs text-slate-500 italic">"Grito Mudo"</p>
+</div>
+</div>
+<span class="text-xs font-medium text-slate-400">850 Almas</span>
+</div>
+</div>
+<button class="w-full py-2 text-sm font-bold text-slate-400 hover:text-accent transition-colors">Ver historial completo</button>
+</div>
+<!-- Fichas de Alma Explanation -->
+<div class="bg-gradient-to-br from-primary/20 to-accent/10 border border-primary/30 rounded-xl p-6 space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent text-3xl">token</span>
+<h2 class="text-xl font-display font-bold text-slate-100">Fichas de Alma</h2>
+</div>
+<p class="text-sm text-slate-300 italic font-display leading-relaxed">
+                            Las Fichas de Alma son la esencia de nuestra comunidad. Gánalas participando en concursos o recibiendo votos en tus poemas.
+                        </p>
+<div class="space-y-3 pt-2">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-accent text-lg">check_circle</span>
+<p class="text-xs text-slate-400">Desbloquea manuscritos antiguos y libros premium de nuestra biblioteca.</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-accent text-lg">check_circle</span>
+<p class="text-xs text-slate-400">Accede a talleres literarios exclusivos con autores consagrados.</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-accent text-lg">check_circle</span>
+<p class="text-xs text-slate-400">Personaliza tu perfil con sellos de poeta distinguido.</p>
+</div>
+</div>
+<div class="bg-black/40 rounded-lg p-4 mt-4 flex justify-between items-center border border-white/5">
+<div>
+<p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Tus Fichas</p>
+<p class="text-xl font-display font-bold text-accent">1,250 <span class="text-xs font-normal">FA</span></p>
+</div>
+<button class="bg-primary hover:bg-primary/80 text-white px-4 py-2 rounded text-xs font-bold transition-all">Ir a la Tienda</button>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<footer class="mt-12 py-10 border-t border-slate-200 dark:border-slate-800 px-6 lg:px-20 flex flex-col md:flex-row justify-between items-center gap-6 bg-background-light dark:bg-background-dark">
+<div class="flex items-center gap-2 text-slate-500">
+<span class="material-symbols-outlined">auto_stories</span>
+<p class="text-sm italic font-display">© 2024 Ecos del Alma. Inspirando al mundo, verso a verso.</p>
+</div>
+<div class="flex items-center gap-8">
+<a class="text-slate-500 hover:text-accent transition-colors" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-slate-500 hover:text-accent transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-slate-500 hover:text-accent transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</footer>
+</div>
+</body></html>
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1754cf",
+                        "gold": "#d4af37",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0a0d14",
+                        "card-dark": "#161b26",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Newsreader', serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-10 py-4 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary dark:text-gold">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight font-display">Ecos del Alma</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<label class="hidden md:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded h-full bg-slate-100 dark:bg-card-dark border border-slate-200 dark:border-slate-800">
+<div class="text-slate-400 flex items-center justify-center pl-3">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-sm font-normal placeholder:text-slate-500" placeholder="Buscar manuscritos..." value=""/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded h-10 w-10 bg-slate-100 dark:bg-card-dark text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-800 hover:border-gold transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary dark:border-gold" data-alt="User profile avatar of a sophisticated reader" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDV3xDmi9BIohJCK5fU8L3da_gVcDfSkihGBx0FGvkDhcuNd3SrH5QLeqHST5o-O0lV4rCBTX_D5V5ZAiVw1IF5ZYv4bldFl5EBS17tgYyB2Z920P6Un397EWGbCoCiBo-5T41CdBuDwHtoOupdeOCCw-NClsDLy_i6yrBCCyh3nymLL_h41TCWJNhfU32fJ6cEPMIEN37I7URLOekCuMdcrRXCDoMoc-SlZ_Vbb0c1AoXNM-XxhZyIwx4GAaIq2UIPFgYs-T6zlyEV");'></div>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto w-full px-6 py-8">
+<!-- Balance Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12 border-b border-slate-200 dark:border-slate-800 pb-8">
+<div class="space-y-2">
+<h1 class="text-4xl md:text-5xl font-black leading-tight tracking-tight font-display text-slate-900 dark:text-slate-100">
+                    Biblioteca de <span class="text-primary dark:text-gold">Manuscritos Exclusivos</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl">
+                    Relatos ancestrales y fragmentos prohibidos. Desbloquea el conocimiento perdido utilizando tus Fichas de Alma.
+                </p>
+</div>
+<div class="bg-primary/10 dark:bg-gold/10 border border-primary/20 dark:border-gold/30 p-6 rounded-xl flex flex-col items-center md:items-end min-w-[200px]">
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium uppercase tracking-widest mb-1">Tu Saldo Actual</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-gold">auto_awesome</span>
+<p class="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight">1,250 <span class="text-sm font-normal text-primary dark:text-gold">FA</span></p>
+</div>
+</div>
+</div>
+<!-- Filter Tabs -->
+<div class="flex border-b border-slate-200 dark:border-slate-800 mb-8 gap-8 overflow-x-auto whitespace-nowrap">
+<button class="border-b-2 border-primary dark:border-gold text-primary dark:text-gold pb-4 font-bold text-sm tracking-wide">TODOS LOS RELATOS</button>
+<button class="border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-4 font-bold text-sm tracking-wide hover:text-slate-700 dark:hover:text-slate-200 transition-colors">RECIÉN DESCUBIERTOS</button>
+<button class="border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-4 font-bold text-sm tracking-wide hover:text-slate-700 dark:hover:text-slate-200 transition-colors">MÁS VALIOSOS</button>
+<button class="border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-4 font-bold text-sm tracking-wide hover:text-slate-700 dark:hover:text-slate-200 transition-colors">MIS DESBLOQUEOS</button>
+</div>
+<!-- Grid of Locked Books -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<!-- Book Card 1 -->
+<div class="group relative flex flex-col bg-slate-100 dark:bg-card-dark rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-gold/50 transition-all duration-300">
+<div class="relative aspect-[2/3] overflow-hidden">
+<img alt="Dark leather book cover with gold filigree" class="w-full h-full object-cover filter grayscale-[40%] group-hover:grayscale-0 transition-all" data-alt="Antique leather book cover with mystical golden ornaments" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVsJ5zKEutXlWFNMgb29d-o2kMREzQ1hLBbF4fQrcPnD_tnsioELFmXxEm7LQ5xstfAjsAb8FBuyHc0KZfIDXhp4NFbfjGUqR6J3pSuPnVcJJz1SY8wPazg7n5iYzyWp4yQbYXWQkPQZrU02LHjYwKmGKDm5gbgmRE8hdYmTa5bPmtT3jEOxpVpaQQ_37Up1EsXpuZlTVeunGgydqUdVuLwQBcKxjh0zyXcTRfGY-OmAK6LuAZ959Hh5Eace2ISXe7ww06G94bN30M"/>
+<div class="absolute inset-0 bg-background-dark/60 backdrop-blur-[2px] flex items-center justify-center opacity-100">
+<div class="bg-background-dark/80 p-4 rounded-full border border-gold/50 shadow-2xl">
+<span class="material-symbols-outlined text-gold text-4xl">lock</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-xl font-bold font-display text-slate-900 dark:text-slate-100 mb-1">El Susurro del Abismo</h3>
+<p class="text-primary dark:text-gold text-xs font-semibold uppercase tracking-widest mb-3">Elena Vance</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-1">
+                        Un manuscrito recuperado de las ruinas de una civilización que creía que el silencio era una deidad.
+                    </p>
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-1 text-slate-900 dark:text-slate-100 font-bold">
+<span>500</span>
+<span class="text-[10px] text-primary dark:text-gold">FA</span>
+</div>
+<button class="px-6 py-2 bg-primary dark:bg-gold text-white dark:text-background-dark text-xs font-bold rounded-lg uppercase tracking-widest hover:brightness-110 transition-all">
+                            Canjear
+                        </button>
+</div>
+</div>
+</div>
+<!-- Book Card 2 -->
+<div class="group relative flex flex-col bg-slate-100 dark:bg-card-dark rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-gold/50 transition-all duration-300">
+<div class="relative aspect-[2/3] overflow-hidden">
+<img alt="Old tattered pages of a diary" class="w-full h-full object-cover filter grayscale-[40%] group-hover:grayscale-0 transition-all" data-alt="Weathered handwritten pages with mystical sketches" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByZ5IsBQ4Po3gm7ETeoX7XQD3tJw73QNy7eHGIMtHsXsgGwgAtaSnzhv4R0EtIysrs-i3xF4IywvLGATc92GY9LlTYaQ4cLHif1im6TVdgWiw-ok4Vdbx5Xu8ufovL8vmIhLI7H_qQ25_OwlR9Me38o3aCd-XXGNAZ8F1IA_O8eqtdZrSmf7tg3QFlwctjfSI48g7YFxON4IbAIUTBgU_iTOLa552rz2VR_w0BTx39QlHBR3ateT9soAdQ2xOkOFd4MOJqD3CPXYo-"/>
+<div class="absolute inset-0 bg-background-dark/60 backdrop-blur-[2px] flex items-center justify-center opacity-100">
+<div class="bg-background-dark/80 p-4 rounded-full border border-gold/50 shadow-2xl">
+<span class="material-symbols-outlined text-gold text-4xl">lock</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-xl font-bold font-display text-slate-900 dark:text-slate-100 mb-1">Crónicas de Ceniza</h3>
+<p class="text-primary dark:text-gold text-xs font-semibold uppercase tracking-widest mb-3">Marco Valerio</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-1">
+                        Relatos sobre el gran incendio que devoró la Biblioteca de Almas en el tercer ciclo de la era antigua.
+                    </p>
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-1 text-slate-900 dark:text-slate-100 font-bold">
+<span>750</span>
+<span class="text-[10px] text-primary dark:text-gold">FA</span>
+</div>
+<button class="px-6 py-2 bg-primary dark:bg-gold text-white dark:text-background-dark text-xs font-bold rounded-lg uppercase tracking-widest hover:brightness-110 transition-all">
+                            Canjear
+                        </button>
+</div>
+</div>
+</div>
+<!-- Book Card 3 (Disabled/Insufficient Funds Style) -->
+<div class="group relative flex flex-col bg-slate-100 dark:bg-card-dark rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 opacity-90 transition-all duration-300">
+<div class="relative aspect-[2/3] overflow-hidden">
+<img alt="Galaxy and stars background book cover" class="w-full h-full object-cover filter grayscale transition-all" data-alt="Abstract celestial nebula on a book cover design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxgdND59A2M_ZWKhe69chkI4Ghcm8mw6w6INL1_NP__xgpcmx7Jp-Q_bGBLZTRFVhvZ7dDaIw161hS6DOo1iB1_tJ6ahjTgcstQrpRcduikq35fKLzCqw8eWxXZ4O-KOLOgNG1HfOUP8soFBqvzJ_ruNdJYNV5KKmktgQVviy2wgBZyIZOwM97UGUP-wveqSJ8Jr_K9bBEJq985O3bN0QyZXDUxHajkkQiheq11gc6EFMEIXmGbc1OXl2ZFlKmn8wD1zshNafIhTwD"/>
+<div class="absolute inset-0 bg-background-dark/80 backdrop-blur-[4px] flex items-center justify-center">
+<div class="flex flex-col items-center gap-2">
+<div class="bg-background-dark/80 p-4 rounded-full border border-slate-700 shadow-2xl">
+<span class="material-symbols-outlined text-slate-500 text-4xl">lock_clock</span>
+</div>
+<span class="text-[10px] font-bold text-gold/60 uppercase tracking-tighter">Faltan 250 FA</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-xl font-bold font-display text-slate-900 dark:text-slate-100 mb-1">El Cántico de los Astrodos</h3>
+<p class="text-primary dark:text-gold text-xs font-semibold uppercase tracking-widest mb-3">Selena Thorne</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-1">
+                        Un tratado astronómico que sugiere que las estrellas son en realidad ojos de observadores eternos.
+                    </p>
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-1 text-slate-500 font-bold">
+<span>1,500</span>
+<span class="text-[10px] text-slate-500/60 uppercase">FA</span>
+</div>
+<button class="px-6 py-2 bg-slate-300 dark:bg-slate-800 text-slate-500 dark:text-slate-600 text-xs font-bold rounded-lg uppercase tracking-widest cursor-not-allowed" disabled="">
+                            Saldo Insuf.
+                        </button>
+</div>
+</div>
+</div>
+<!-- Book Card 4 -->
+<div class="group relative flex flex-col bg-slate-100 dark:bg-card-dark rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-gold/50 transition-all duration-300">
+<div class="relative aspect-[2/3] overflow-hidden">
+<img alt="Ink and quill on old paper" class="w-full h-full object-cover filter grayscale-[40%] group-hover:grayscale-0 transition-all" data-alt="Vintage quill pen resting on parchment paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrA2-MJybGEey0hrr3P88ZJfHArTrRnfWxsG7CtKp-r6oOL0-7QT-rvOIdkrKcq18QQfarswkRx3YGJ5DUOoVboKd-SqFCBrKUhXVcuKSGfje2evMWaxZVujzNOXvYuRKG6zWHg50StoXRzskstH87mMQUjDS6P0yIGg27vDIS2t1p2Z-LuqXD-JdaUaTovXM6WSwhuU98axr4IzmpuM7zXPk8dUKEqVmpIKN_jZXjzeV5zs6c7JIr0YHRL-VkLdDuholqZsd4l297"/>
+<div class="absolute inset-0 bg-background-dark/60 backdrop-blur-[2px] flex items-center justify-center opacity-100">
+<div class="bg-background-dark/80 p-4 rounded-full border border-gold/50 shadow-2xl">
+<span class="material-symbols-outlined text-gold text-4xl">lock</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-xl font-bold font-display text-slate-900 dark:text-slate-100 mb-1">Poemas de la Sombra</h3>
+<p class="text-primary dark:text-gold text-xs font-semibold uppercase tracking-widest mb-3">Adrian Draken</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-1">
+                        Antología de versos escritos por un monje que decidió vivir en total oscuridad durante cuarenta años.
+                    </p>
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-1 text-slate-900 dark:text-slate-100 font-bold">
+<span>300</span>
+<span class="text-[10px] text-primary dark:text-gold">FA</span>
+</div>
+<button class="px-6 py-2 bg-primary dark:bg-gold text-white dark:text-background-dark text-xs font-bold rounded-lg uppercase tracking-widest hover:brightness-110 transition-all">
+                            Canjear
+                        </button>
+</div>
+</div>
+</div>
+<!-- Book Card 5 -->
+<div class="group relative flex flex-col bg-slate-100 dark:bg-card-dark rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-gold/50 transition-all duration-300">
+<div class="relative aspect-[2/3] overflow-hidden">
+<img alt="Mountain range book cover" class="w-full h-full object-cover filter grayscale-[40%] group-hover:grayscale-0 transition-all" data-alt="Misty mountain landscape on a classic book cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ_ygl5L1m42PHPuktRxzh9BvgOTK_N3m-yWiErSZoNgUSWolOvFko_OwH1tvySB4iiq4dOUamgpMwMITqhttmBy3laYf87AkFvfJ0VaN6LeMRzfHjcg6gRXoqqSxKiP3wMCUhCiC7ym12GTOyDIzFcvyTsUf3iJyCnQbRgqak2Jp1mMDzEd4kS3N8k6BxqDzjkv1Gh2g0n-9UG1e2fWbhMD9JuyH5xP7IDDz4w9Msc8c3BdkGscrhHq1hesBsTrHwCVAiGQB6Ydhm"/>
+<div class="absolute inset-0 bg-background-dark/60 backdrop-blur-[2px] flex items-center justify-center opacity-100">
+<div class="bg-background-dark/80 p-4 rounded-full border border-gold/50 shadow-2xl">
+<span class="material-symbols-outlined text-gold text-4xl">lock</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-xl font-bold font-display text-slate-900 dark:text-slate-100 mb-1">Memorias de la Niebla</h3>
+<p class="text-primary dark:text-gold text-xs font-semibold uppercase tracking-widest mb-3">Julian Frost</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-1">
+                        Un diario de viaje por las Tierras Blancas, donde los recuerdos se desvanecen antes de ser vividos.
+                    </p>
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-1 text-slate-900 dark:text-slate-100 font-bold">
+<span>850</span>
+<span class="text-[10px] text-primary dark:text-gold">FA</span>
+</div>
+<button class="px-6 py-2 bg-primary dark:bg-gold text-white dark:text-background-dark text-xs font-bold rounded-lg uppercase tracking-widest hover:brightness-110 transition-all">
+                            Canjear
+                        </button>
+</div>
+</div>
+</div>
+<!-- Book Card 6 (Disabled Style) -->
+<div class="group relative flex flex-col bg-slate-100 dark:bg-card-dark rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 opacity-90 transition-all duration-300">
+<div class="relative aspect-[2/3] overflow-hidden">
+<img alt="Dark waves on cover" class="w-full h-full object-cover filter grayscale transition-all" data-alt="Deep ocean waves under a moonlit sky book cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwjDIybr624EzGv45wjrPSdQIFsnGSlr-_jE6thwocfh71GPvS4cR65pnNzbmia7ZZB4sj_wj-3YJuv_8eKDGty_MQMrFOwIrRfP2GFVJWYQZLSMCVJArgemY8R0JGf5Ro5k_kK7faa1Rn3uMk5kt_Dy2I6b27QRnqmPLGcdFfhCaK425ecgtRwBX_xITQda9lefYM_aFFOoLol4vstmtfILZWFXPbJ-hDfs3i0GZXeiHBcTAWF08VjHXu4kW5avp4jzILMPEfv3j6"/>
+<div class="absolute inset-0 bg-background-dark/80 backdrop-blur-[4px] flex items-center justify-center">
+<div class="flex flex-col items-center gap-2">
+<div class="bg-background-dark/80 p-4 rounded-full border border-slate-700 shadow-2xl">
+<span class="material-symbols-outlined text-slate-500 text-4xl">lock_clock</span>
+</div>
+<span class="text-[10px] font-bold text-gold/60 uppercase tracking-tighter">Faltan 750 FA</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-xl font-bold font-display text-slate-900 dark:text-slate-100 mb-1">El Abismo de Coral</h3>
+<p class="text-primary dark:text-gold text-xs font-semibold uppercase tracking-widest mb-3">Isabella Mare</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-1">
+                        Leyendas de las ciudades sumergidas que aún respiran bajo el peso del océano infinito.
+                    </p>
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-1 text-slate-500 font-bold">
+<span>2,000</span>
+<span class="text-[10px] text-slate-500/60 uppercase">FA</span>
+</div>
+<button class="px-6 py-2 bg-slate-300 dark:bg-slate-800 text-slate-500 dark:text-slate-600 text-xs font-bold rounded-lg uppercase tracking-widest cursor-not-allowed" disabled="">
+                            Saldo Insuf.
+                        </button>
+</div>
+</div>
+</div>
+<!-- Empty slots to suggest more content -->
+<div class="hidden lg:flex flex-col border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl items-center justify-center p-8 opacity-40">
+<span class="material-symbols-outlined text-5xl mb-2">auto_stories</span>
+<p class="text-xs font-bold uppercase tracking-widest">Próximamente</p>
+</div>
+<div class="hidden xl:flex flex-col border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl items-center justify-center p-8 opacity-40">
+<span class="material-symbols-outlined text-5xl mb-2">auto_stories</span>
+<p class="text-xs font-bold uppercase tracking-widest">Próximamente</p>
+</div>
+</div>
+<!-- Footer Info -->
+<footer class="mt-20 border-t border-slate-200 dark:border-slate-800 pt-12 pb-8 text-center">
+<div class="flex items-center justify-center gap-8 mb-6">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary dark:text-gold text-3xl mb-2">verified</span>
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Autenticidad Garantizada</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary dark:text-gold text-3xl mb-2">history_edu</span>
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Relatos de Colección</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary dark:text-gold text-3xl mb-2">loyalty</span>
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Beneficios Premium</p>
+</div>
+</div>
+<p class="text-slate-500 dark:text-slate-600 text-sm">© 2024 Ecos del Alma - Fragmentos del Tiempo para el Lector Erudito.</p>
+</footer>
+</main>
+</div>
+</body></html>
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Ecos del Alma - Acceso de Administrador</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-slate-100">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Background Watermark/Pattern -->
+<div class="absolute inset-0 z-0 opacity-5 pointer-events-none flex items-center justify-center">
+<svg class="w-[600px] h-[600px] text-primary" fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"></path>
+</svg>
+</div>
+<!-- Main Content Container -->
+<div class="layout-container flex h-full grow flex-col z-10">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 px-6 md:px-10 py-4 backdrop-blur-sm bg-background-dark/50">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-slate-100 text-xl font-bold leading-tight tracking-tight uppercase">Ecos del Alma</h2>
+</div>
+<div class="text-primary/60">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+</header>
+<main class="flex flex-1 flex-col items-center justify-center px-4">
+<div class="w-full max-w-md space-y-8 bg-background-dark/80 p-8 rounded-xl border border-primary/10 shadow-2xl backdrop-blur-md">
+<div class="text-center space-y-3">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 border border-primary/30 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">lock_person</span>
+</div>
+<h1 class="text-slate-100 text-3xl font-black leading-tight tracking-tight">Acceso de Administrador</h1>
+<p class="text-slate-400 text-base font-normal">Ingresa tu código único para continuar</p>
+</div>
+<div class="space-y-6">
+<div class="flex justify-center py-2">
+<!-- Single Multi-Digit Input Field Container -->
+<fieldset class="relative flex gap-3 sm:gap-4">
+<input autocomplete="one-time-code" autofocus="" class="flex h-16 w-12 sm:w-14 text-center bg-transparent border-0 border-b-2 border-primary/30 focus:border-primary focus:ring-0 text-2xl font-bold text-primary transition-colors" inputmode="numeric" maxlength="1" pattern="\d*" type="text"/>
+<input class="flex h-16 w-12 sm:w-14 text-center bg-transparent border-0 border-b-2 border-primary/30 focus:border-primary focus:ring-0 text-2xl font-bold text-primary transition-colors" inputmode="numeric" maxlength="1" pattern="\d*" type="text"/>
+<input class="flex h-16 w-12 sm:w-14 text-center bg-transparent border-0 border-b-2 border-primary/30 focus:border-primary focus:ring-0 text-2xl font-bold text-primary transition-colors" inputmode="numeric" maxlength="1" pattern="\d*" type="text"/>
+<input class="flex h-16 w-12 sm:w-14 text-center bg-transparent border-0 border-b-2 border-primary/30 focus:border-primary focus:ring-0 text-2xl font-bold text-primary transition-colors" inputmode="numeric" maxlength="1" pattern="\d*" type="text"/>
+<input class="flex h-16 w-12 sm:w-14 text-center bg-transparent border-0 border-b-2 border-primary/30 focus:border-primary focus:ring-0 text-2xl font-bold text-primary transition-colors" inputmode="numeric" maxlength="1" pattern="\d*" type="text"/>
+<input class="flex h-16 w-12 sm:w-14 text-center bg-transparent border-0 border-b-2 border-primary/30 focus:border-primary focus:ring-0 text-2xl font-bold text-primary transition-colors" inputmode="numeric" maxlength="1" pattern="\d*" type="text"/>
+</fieldset>
+</div>
+<div class="flex flex-col gap-4">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-6 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal tracking-wide transition-all shadow-lg shadow-primary/20 group">
+<span class="truncate uppercase mr-2">Verificar Credenciales</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1">key</span>
+</button>
+<div class="flex items-center justify-between px-1">
+<a class="text-xs text-primary/60 hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">help_outline</span>
+                                Ayuda con mi código
+                            </a>
+<a class="text-xs text-primary/60 hover:text-primary transition-colors" href="#">Volver al sitio</a>
+</div>
+</div>
+</div>
+<!-- Subtle Decorative Element -->
+<div class="pt-8 border-t border-primary/10 flex flex-col items-center gap-2">
+<div class="h-0.5 w-12 bg-primary/20 rounded-full"></div>
+<span class="text-[10px] text-primary/30 uppercase tracking-[0.3em]">Cámara de Custodia de Manuscritos</span>
+</div>
+</div>
+</main>
+<footer class="p-6 text-center">
+<p class="text-primary/40 text-xs font-medium tracking-wider">
+                © 2024 ECOS DEL ALMA. ARCHIVO RESTRINGIDO.
+            </p>
+</footer>
+</div>
+</div>
+<style>
+    /* Custom styles for focus transitions and hiding spin buttons */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+    
+    /* Background enhancement */
+    body {
+        background: radial-gradient(circle at center, #2d1d15 0%, #221610 100%);
+    }
+</style>
+</body></html>
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ecos del Alma - Panel de Administración</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #ec5b1344;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-72 bg-slate-100 dark:bg-slate-900/50 border-r border-slate-200 dark:border-primary/20 flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="bg-primary/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl">auto_stories</span>
+</div>
+<div>
+<h1 class="text-lg font-bold tracking-tight">Ecos del Alma</h1>
+<p class="text-xs text-primary font-medium uppercase tracking-widest">Panel de Administración</p>
+</div>
+</div>
+<nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto custom-scrollbar">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary text-white transition-all" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-medium">Publicar Libro</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 text-slate-600 dark:text-slate-400 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">trophy</span>
+<span class="font-medium">Gestionar Concursos</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 text-slate-600 dark:text-slate-400 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="font-medium">Métricas de Comunidad</span>
+</a>
+<div class="pt-6 pb-2 px-4">
+<p class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em]">Biblioteca</p>
+</div>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 text-slate-600 dark:text-slate-400 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">history_edu</span>
+<span class="font-medium">Manuscritos</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 text-slate-600 dark:text-slate-400 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-medium">Autores</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-primary/10">
+<div class="flex items-center gap-3 p-2">
+<div class="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/30">
+<img class="w-full h-full object-cover" data-alt="Admin user profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOVleztjFi1ywDHL0Hd1UPRdRcZRoNprf_pNlIwmPP_DQxS2COSw2oHwpQ5o9jmH0JLe-CEnwXX47JPG3RU3RSRCeohXTc8H80jTD8gV5ZYLfDibmp6Yccq7kWOKGRfLx9HSKN6nNI7wsZgTU3UDURypwg323-p3muS8Z2-4DZ5GnCp7Fi5PzskrY8f0N3CC0KdR7yq2oiPpYzAlTrdfXCmlCoHyud6aNJ3WTnTeyiDCuwY5GN6MXfxaeIFMXely22ZSiUXRNdd7_M"/>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold truncate">Admin Principal</p>
+<p class="text-xs text-slate-500">Editor Senior</p>
+</div>
+<button class="text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto custom-scrollbar bg-background-light dark:bg-background-dark">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-8 py-6 border-b border-slate-200 dark:border-primary/10">
+<div class="flex justify-between items-center">
+<div>
+<h2 class="text-2xl font-black tracking-tight">Publicar Nuevo Manuscrito</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Añade una obra exclusiva al catálogo sagrado de Ecos del Alma.</p>
+</div>
+<div class="flex gap-3">
+<button class="px-5 py-2.5 rounded-xl border border-slate-200 dark:border-primary/30 font-medium text-sm hover:bg-slate-50 dark:hover:bg-primary/5 transition-colors">Vista Previa</button>
+<button class="px-5 py-2.5 rounded-xl bg-primary text-white font-bold text-sm shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">Publicar Ahora</button>
+</div>
+</div>
+</header>
+<div class="p-8 max-w-6xl mx-auto space-y-12">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Form Section -->
+<div class="lg:col-span-2 space-y-8">
+<section class="bg-white dark:bg-slate-900/40 p-8 rounded-2xl border border-slate-100 dark:border-primary/10 shadow-sm">
+<h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+                                Detalles de la Obra
+                            </h3>
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-semibold mb-2 text-slate-700 dark:text-slate-300">Título del Libro</label>
+<input class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-primary/20 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="Ej: Crónicas del Viento Olvidado" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-semibold mb-2 text-slate-700 dark:text-slate-300">Nombre del Autor</label>
+<input class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-primary/20 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="Firma del escritor" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2 text-slate-700 dark:text-slate-300">Costo en FA (Fichas de Alma)</label>
+<div class="relative">
+<input class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-primary/20 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="500" type="number"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary">stars</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2 text-slate-700 dark:text-slate-300">Descripción</label>
+<textarea class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-primary/20 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none resize-none" placeholder="Resume la esencia de esta obra para los lectores..." rows="5"></textarea>
+</div>
+</div>
+</section>
+</div>
+<!-- Upload and Options -->
+<div class="space-y-8">
+<section class="bg-white dark:bg-slate-900/40 p-8 rounded-2xl border border-slate-100 dark:border-primary/10 shadow-sm">
+<h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">image</span>
+                                Subir Portada
+                            </h3>
+<div class="border-2 border-dashed border-slate-200 dark:border-primary/20 rounded-2xl p-8 text-center hover:bg-primary/5 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-5xl text-slate-300 dark:text-primary/40 group-hover:text-primary transition-colors mb-4">cloud_upload</span>
+<p class="text-sm font-medium">Click para seleccionar o arrastra la imagen</p>
+<p class="text-xs text-slate-400 mt-2">JPG, PNG o WEBP (Recomendado 600x900px)</p>
+</div>
+</section>
+<section class="bg-primary/10 p-6 rounded-2xl border border-primary/20">
+<h4 class="font-bold text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">info</span>
+                                Guía de Publicación
+                            </h4>
+<ul class="text-xs space-y-3 text-slate-600 dark:text-slate-400">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[14px] mt-0.5">check_circle</span>
+                                    Las obras exclusivas deben tener un mínimo de 15,000 palabras.
+                                </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[14px] mt-0.5">check_circle</span>
+                                    La portada debe ser contenido original o con licencia.
+                                </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[14px] mt-0.5">check_circle</span>
+                                    El costo en FA debe ser aprobado por el comité editorial.
+                                </li>
+</ul>
+</section>
+</div>
+</div>
+<!-- List of Published Works -->
+<section>
+<div class="flex justify-between items-end mb-8">
+<div>
+<h3 class="text-2xl font-black tracking-tight">Manuscritos Publicados</h3>
+<p class="text-slate-500 dark:text-slate-400">Gestión de la biblioteca actual y sus métricas básicas.</p>
+</div>
+<div class="flex bg-slate-100 dark:bg-slate-800/50 p-1 rounded-lg">
+<button class="px-4 py-1.5 text-xs font-bold bg-white dark:bg-slate-700 rounded-md shadow-sm">Todos</button>
+<button class="px-4 py-1.5 text-xs font-bold text-slate-500 hover:text-primary transition-colors">Activos</button>
+<button class="px-4 py-1.5 text-xs font-bold text-slate-500 hover:text-primary transition-colors">Borradores</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Book Card 1 -->
+<div class="bg-white dark:bg-slate-900/40 rounded-2xl border border-slate-100 dark:border-primary/10 overflow-hidden hover:shadow-xl transition-shadow group">
+<div class="flex h-48">
+<div class="w-1/3 relative">
+<img class="w-full h-full object-cover" data-alt="Old book cover artistic photograph" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTaUGn6IFxkvx-6DAKAc-Af93hOh281E8ifUCh0Kj_TosQ3lf5MOreRz_m0lBLbRxYOFbShB872LVvMIPpJL6iTukcxdk_csu6x02dC6AdliN46MxeCB-wWY6or-Mmf6CaeqXVvdzEP-eMhhfXijtgp-88z2VCW-WXNfw9bxOR1aEhIaIXD3zfdwt8gQnQoCtpl_6cu7JHfOxxVhFfqodrndKasMIV1Ztw0-cU_Mhjoi1f4RdGBHcfGnMB1ysnCKV184pik6R9fk7O"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white">zoom_in</span>
+</div>
+</div>
+<div class="w-2/3 p-5 flex flex-col">
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold text-primary uppercase bg-primary/10 px-2 py-0.5 rounded">Fantasía</span>
+<div class="flex gap-1">
+<button class="p-1 text-slate-400 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">edit</span></button>
+<button class="p-1 text-slate-400 hover:text-red-500 transition-colors"><span class="material-symbols-outlined text-sm">delete</span></button>
+</div>
+</div>
+<h4 class="font-bold text-lg leading-tight mb-1">El Susurro de las Sombras</h4>
+<p class="text-xs text-slate-500 mb-3">Por: Elena de Valois</p>
+<div class="flex items-center gap-4 text-[10px] font-bold text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">visibility</span> 1.2k</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">stars</span> 450 FA</span>
+</div>
+</div>
+<div class="pt-4 mt-auto border-t border-slate-100 dark:border-primary/5">
+<button class="w-full py-2 text-xs font-bold text-primary border border-primary/20 rounded-lg hover:bg-primary hover:text-white transition-all">Ver Estadísticas</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Book Card 2 -->
+<div class="bg-white dark:bg-slate-900/40 rounded-2xl border border-slate-100 dark:border-primary/10 overflow-hidden hover:shadow-xl transition-shadow group">
+<div class="flex h-48">
+<div class="w-1/3 relative">
+<img class="w-full h-full object-cover" data-alt="Modern minimalist book cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVUgKNsjLVNwWNoBtcRr9MabxQ24lieYz_w1CEM4WiNs81fRugMrU1c3wJpOsA9Twsd-LxXvGMQ0t3BJTYQr8oxybauE8tD6KUab_gjGyDp-8t6UEbPKgy9v-vOigJ7r6RsckMMm7Kaf-7HDwtoLOlBnknpBxSaUI-FjNBwF5GNxv2z4kKU4hBXO7n7zsPJ_FAN68tdVqC0xMt12HKJiXqeFOEQVMEO42zHT3wkzAmyGYjNxYfJQoHCEVaFYgFvhIthzjVhsSbNDsk"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white">zoom_in</span>
+</div>
+</div>
+<div class="w-2/3 p-5 flex flex-col">
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold text-primary uppercase bg-primary/10 px-2 py-0.5 rounded">Misterio</span>
+<div class="flex gap-1">
+<button class="p-1 text-slate-400 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">edit</span></button>
+<button class="p-1 text-slate-400 hover:text-red-500 transition-colors"><span class="material-symbols-outlined text-sm">delete</span></button>
+</div>
+</div>
+<h4 class="font-bold text-lg leading-tight mb-1">Ecos del Reloj de Arena</h4>
+<p class="text-xs text-slate-500 mb-3">Por: Marcus Vanz</p>
+<div class="flex items-center gap-4 text-[10px] font-bold text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">visibility</span> 840</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">stars</span> 320 FA</span>
+</div>
+</div>
+<div class="pt-4 mt-auto border-t border-slate-100 dark:border-primary/5">
+<button class="w-full py-2 text-xs font-bold text-primary border border-primary/20 rounded-lg hover:bg-primary hover:text-white transition-all">Ver Estadísticas</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Book Card 3 (Draft) -->
+<div class="bg-white dark:bg-slate-900/40 rounded-2xl border border-slate-100 dark:border-primary/10 overflow-hidden hover:shadow-xl transition-shadow group opacity-75">
+<div class="flex h-48">
+<div class="w-1/3 relative bg-slate-200 dark:bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-slate-400">pending_actions</span>
+</div>
+<div class="w-2/3 p-5 flex flex-col">
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold text-slate-500 uppercase bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded">Borrador</span>
+<div class="flex gap-1">
+<button class="p-1 text-slate-400 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">edit</span></button>
+<button class="p-1 text-slate-400 hover:text-red-500 transition-colors"><span class="material-symbols-outlined text-sm">delete</span></button>
+</div>
+</div>
+<h4 class="font-bold text-lg leading-tight mb-1 italic">Título sin definir</h4>
+<p class="text-xs text-slate-500 mb-3">Por: Pendiente</p>
+<div class="flex items-center gap-4 text-[10px] font-bold text-slate-400">
+<span class="flex items-center gap-1 italic">Sin publicar</span>
+</div>
+</div>
+<div class="pt-4 mt-auto border-t border-slate-100 dark:border-primary/5">
+<button class="w-full py-2 text-xs font-bold text-slate-600 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Continuar Edición</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</body></html>
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Ecos del Alma - Acceso de Administrador</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-slate-100">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Background Watermark/Pattern -->
+<div class="absolute inset-0 z-0 opacity-5 pointer-events-none flex items-center justify-center">
+<svg class="w-[600px] h-[600px] text-primary" fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"></path>
+</svg>
+</div>
+<!-- Main Content Container -->
+<div class="layout-container flex h-full grow flex-col z-10">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 px-6 md:px-10 py-4 backdrop-blur-sm bg-background-dark/50">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-slate-100 text-xl font-bold leading-tight tracking-tight uppercase">Ecos del Alma</h2>
+</div>
+<div class="text-primary/60">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+</header>
+<main class="flex flex-1 flex-col items-center justify-center px-4">
+<div class="w-full max-w-lg space-y-8 bg-background-dark/80 p-8 rounded-xl border border-primary/10 shadow-2xl backdrop-blur-md">
+<div class="text-center space-y-3">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 border border-primary/30 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">lock_person</span>
+</div>
+<h1 class="text-slate-100 text-3xl font-black leading-tight tracking-tight">Acceso de Administrador</h1>
+<p class="text-slate-400 text-base font-normal">Ingresa el código maestro para continuar</p>
+</div>
+<div class="space-y-6">
+<div class="flex justify-center py-2">
+<!-- Single Multi-Digit Input Field Container -->
+<div class="w-full flex flex-col items-center gap-2">
+<input autocomplete="off" class="w-full h-16 bg-transparent border-0 border-b-2 border-primary/30 focus:border-primary focus:ring-0 text-xl md:text-2xl font-bold text-primary text-center transition-all placeholder:text-primary/20 uppercase tracking-widest" placeholder="••••••••••••" type="text"/>
+<p class="text-[10px] text-primary/40 uppercase tracking-tighter italic">Código Maestro Requerido</p>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-6 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal tracking-wide transition-all shadow-lg shadow-primary/20 group">
+<span class="truncate uppercase mr-2">Verificar Credenciales</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1">key</span>
+</button>
+<div class="flex items-center justify-between px-1">
+<a class="text-xs text-primary/60 hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">help_outline</span>
+                                Ayuda con mi código
+                            </a>
+<a class="text-xs text-primary/60 hover:text-primary transition-colors" href="#">Volver al sitio</a>
+</div>
+</div>
+</div>
+<!-- Subtle Decorative Element -->
+<div class="pt-8 border-t border-primary/10 flex flex-col items-center gap-2">
+<div class="h-0.5 w-12 bg-primary/20 rounded-full"></div>
+<span class="text-[10px] text-primary/30 uppercase tracking-[0.3em]">Cámara de Custodia de Manuscritos</span>
+</div>
+</div>
+</main>
+<footer class="p-6 text-center">
+<p class="text-primary/40 text-xs font-medium tracking-wider">
+                © 2024 ECOS DEL ALMA. ARCHIVO RESTRINGIDO.
+            </p>
+</footer>
+</div>
+</div>
+<style>
+    /* Custom styles for focus transitions and hiding spin buttons */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+    
+    /* Background enhancement */
+    body {
+        background: radial-gradient(circle at center, #2d1d15 0%, #221610 100%);
+    }
+</style>
+</body></html>
