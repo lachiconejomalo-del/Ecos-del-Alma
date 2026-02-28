@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1754cf",
+                        "background-dark": "#0a0b10",
+                        "surface-dark": "#161c2d",
+                    },
+                    fontFamily: { "display": ["Newsreader", "serif"] },
+                },
+            },
+        }
+    </script>
+    <style> body { font-family: 'Newsreader', serif; } </style>
+    <title>Ecos del Alma - Unirse</title>
+</head>
+<body class="bg-background-dark text-slate-100 min-h-screen flex flex-col items-center justify-center px-6">
+    <div class="max-w-md w-full space-y-8 bg-surface-dark p-10 rounded-2xl border border-slate-800 shadow-2xl">
+        <div class="text-center space-y-2">
+            <div class="flex justify-center text-primary mb-4">
+                <span class="material-symbols-outlined text-6xl">auto_stories</span>
+            </div>
+            <h2 class="text-3xl font-bold italic tracking-tight">Ecos del Alma</h2>
+            <p class="text-slate-400 text-sm italic">Comienza tu viaje literario hoy mismo.</p>
+        </div>
+        
+        <form class="space-y-6">
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest text-primary mb-1">Nombre de Poeta</label>
+                    <input type="text" placeholder="Ej: Neruda_2026" class="w-full bg-slate-900 border-slate-800 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest text-primary mb-1">Correo Electrónico</label>
+                    <input type="email" placeholder="alma@versos.com" class="w-full bg-slate-900 border-slate-800 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest text-primary mb-1">Contraseña</label>
+                    <input type="password" placeholder="••••••••" class="w-full bg-slate-900 border-slate-800 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all">
+                </div>
+            </div>
+
+            <button type="button" onclick="location.href='index.html'" class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-all shadow-lg shadow-primary/20">
+                Crear Cuenta
+            </button>
+        </form>
+
+        <div class="text-center pt-4">
+            <p class="text-slate-500 text-xs italic">¿Ya eres parte de nosotros? <a href="index.html" class="text-primary hover:underline">Inicia sesión</a></p>
+        </div>
+    </div>
+</body>
+</html>
