@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-dark": "#1a110c",
+                    },
+                    fontFamily: { "display": ["Public Sans"] },
+                },
+            },
+        }
+    </script>
+    <style> body { font-family: 'Public Sans', sans-serif; } </style>
+    <title>Ecos del Alma - Panel Maestro</title>
+</head>
+<body class="bg-background-dark text-slate-100 min-h-screen flex">
+    <aside class="w-64 border-r border-white/5 bg-black/20 p-6 space-y-8 hidden md:block">
+        <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary">shield</span>
+            <span class="font-black uppercase tracking-tighter">Panel Maestro</span>
+        </div>
+        <nav class="space-y-4">
+            <a href="#" class="flex items-center gap-3 text-primary font-bold"><span class="material-symbols-outlined">edit_document</span> Publicar</a>
+            <a href="Index.html" class="flex items-center gap-3 text-slate-500 hover:text-white transition-colors"><span class="material-symbols-outlined">logout</span> Salir</a>
+        </nav>
+    </aside>
+
+    <main class="flex-1 p-8 md:p-12">
+        <header class="mb-12">
+            <h1 class="text-4xl font-black uppercase tracking-tighter text-white">Publicar Nuevo <span class="text-primary">Manuscrito</span></h1>
+            <p class="text-slate-500 italic">Añade tesoros a la Biblioteca de las Almas.</p>
+        </header>
+
+        <div class="max-w-2xl bg-white/5 p-8 rounded-3xl border border-white/5 space-y-6">
+            <div class="space-y-2">
+                <label class="text-[10px] font-bold uppercase tracking-widest text-primary">Título de la Obra</label>
+                <input type="text" placeholder="Ej: Las Crónicas del Silencio" class="w-full bg-black/40 border-0 border-b border-white/10 py-3 outline-none focus:border-primary transition-all">
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="space-y-2">
+                    <label class="text-[10px] font-bold uppercase tracking-widest text-primary">Costo (FA)</label>
+                    <input type="number" placeholder="500" class="w-full bg-black/40 border-0 border-b border-white/10 py-3 outline-none focus:border-primary">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[10px] font-bold uppercase tracking-widest text-primary">Categoría</label>
+                    <select class="w-full bg-black/40 border-0 border-b border-white/10 py-3 outline-none focus:border-primary text-slate-400">
+                        <option>Poesía Antigua</option>
+                        <option>Relatos Perdidos</option>
+                    </select>
+                </div>
+            </div>
+            <button class="w-full bg-primary text-white font-bold py-4 rounded-2xl shadow-xl shadow-primary/10 hover:scale-[1.02] transition-all">Subir a la Bóveda</button>
+        </div>
+    </main>
+</body>
+</html>
