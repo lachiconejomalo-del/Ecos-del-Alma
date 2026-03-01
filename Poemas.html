@@ -22,48 +22,75 @@
         }
     </script>
     <style> body { font-family: 'Newsreader', serif; } </style>
-    <title>Ecos del Alma - Explorar Poemas</title>
+    <title>Ecos del Alma - Galería de Versos</title>
 </head>
-<body class="bg-background-dark text-slate-100 min-h-screen">
+<body class="bg-background-dark text-slate-100 min-h-screen pb-20">
     <header class="flex items-center justify-between border-b border-slate-800 px-6 py-4 lg:px-20 sticky top-0 z-50 bg-background-dark/80 backdrop-blur-md">
         <div class="flex items-center gap-8">
             <h2 class="text-primary text-xl font-bold italic">Ecos del Alma</h2>
             <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-400">
-                <a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+                <a class="hover:text-primary transition-colors" href="Index.html">Inicio</a>
                 <a class="text-primary border-b border-primary" href="poemas.html">Poemas</a>
-                <a class="hover:text-primary transition-colors" href="concursos.html">Concursos</a>
-                <a class="hover:text-primary transition-colors" href="biblioteca.html">Biblioteca</a>
-                <a class="hover:text-primary transition-colors" href="diario.html">Mi Diario</a>
+                <a class="hover:text-primary transition-colors" href="Concursos.html">Concursos</a>
+                <a class="hover:text-primary transition-colors" href="Biblioteca.html">Biblioteca</a>
+                <a class="hover:text-primary transition-colors" href="Diario.html">Mi Diario</a>
             </nav>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-6 py-10">
-        <div class="mb-12 space-y-2">
-            <h1 class="text-4xl font-bold italic">PoetryHaven</h1>
-            <p class="text-slate-400 italic">"Donde cada palabra resuena en la eternidad."</p>
+        <div class="mb-12 border-b border-white/5 pb-6">
+            <h2 class="text-primary text-xs font-bold uppercase tracking-[0.3em] mb-2">Grandes Maestros</h2>
+            <h1 class="text-4xl font-bold italic">Inspiración Eterna</h1>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-surface-dark border border-slate-800 p-8 rounded-xl hover:border-primary/50 transition-all group">
-                <span class="text-primary material-symbols-outlined text-3xl opacity-20 group-hover:opacity-100 transition-opacity">format_quote</span>
-                <h3 class="text-2xl font-bold mb-4 italic group-hover:text-primary transition-colors">Vientos de Olvido</h3>
-                <p class="text-slate-400 italic leading-relaxed mb-6">"Las hojas secas bailan un vals que nadie compuso, mientras el frío besa las ventanas..."</p>
-                <div class="pt-6 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs text-slate-300 font-bold italic">Julian S.</span>
-                    <span class="material-symbols-outlined text-sm text-slate-500">favorite</span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <div class="bg-surface-dark border border-primary/20 p-8 rounded-xl relative overflow-hidden group">
+                <div class="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <span class="material-symbols-outlined text-9xl">ink_pen</span>
                 </div>
+                <h3 class="text-xl font-bold text-primary mb-4 italic">Pablo Neruda</h3>
+                <p class="text-slate-300 italic mb-6">"Puedo escribir los versos más tristes esta noche. Escribir, por ejemplo: 'La noche está estrellada, y tiritan, azules, los astros, a lo lejos'..."</p>
+                <span class="text-[10px] text-slate-500 uppercase tracking-widest">Poema 20</span>
             </div>
-            <div class="bg-surface-dark border border-slate-800 p-8 rounded-xl hover:border-primary/50 transition-all group">
-                <span class="text-primary material-symbols-outlined text-3xl opacity-20 group-hover:opacity-100 transition-opacity">format_quote</span>
-                <h3 class="text-2xl font-bold mb-4 italic group-hover:text-primary transition-colors">Mar de Cristal</h3>
-                <p class="text-slate-400 italic leading-relaxed mb-6">"En la orilla del pensamiento, las olas rompen en silencio, trayendo caracolas de recuerdos..."</p>
-                <div class="pt-6 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs text-slate-300 font-bold italic">Elena de Valois</span>
-                    <span class="material-symbols-outlined text-sm text-slate-500">favorite</span>
+
+            <div class="bg-surface-dark border border-primary/20 p-8 rounded-xl relative overflow-hidden group">
+                <h3 class="text-xl font-bold text-primary mb-4 italic">Mario Benedetti</h3>
+                <p class="text-slate-300 italic mb-6">"No te salves, no te llenes de calma, no reserves del mundo solo un rincón tranquilo, no dejes caer los párpados pesados como juicios..."</p>
+                <span class="text-[10px] text-slate-500 uppercase tracking-widest">No te salves</span>
+            </div>
+
+            <div class="bg-surface-dark border border-primary/20 p-8 rounded-xl relative overflow-hidden group">
+                <h3 class="text-xl font-bold text-primary mb-4 italic">Paulo Coelho</h3>
+                <p class="text-slate-300 italic mb-6">"Cuando quieres algo, todo el universo conspira para que realices tu deseo. El lenguaje de los sueños es el alma del mundo..."</p>
+                <span class="text-[10px] text-slate-500 uppercase tracking-widest">El Alquimista</span>
+            </div>
+        </div>
+
+        <div class="mb-12 border-b border-white/5 pb-6 flex justify-between items-end">
+            <div>
+                <h2 class="text-primary text-xs font-bold uppercase tracking-[0.3em] mb-2">Voces Nuevas</h2>
+                <h1 class="text-4xl font-bold italic">Versos de la Comunidad</h1>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white/5 border border-white/5 p-8 rounded-xl hover:bg-white/10 transition-all">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center text-primary font-bold text-xs italic">A</div>
+                    <span class="text-sm font-bold text-slate-300">@Alma_Libre</span>
+                </div>
+                <p class="text-slate-400 italic mb-4">"En el silencio de la pantalla, encontré un eco que no sabía que tenía nombre. Mis letras son sombras buscando luz."</p>
+                <div class="flex gap-4 text-slate-500">
+                    <button class="flex items-center gap-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">favorite</span> <span class="text-xs">24</span></button>
+                    <button class="flex items-center gap-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">chat_bubble</span> <span class="text-xs">5</span></button>
                 </div>
             </div>
         </div>
     </main>
+
+    <button onclick="location.href='Diario.html'" class="fixed bottom-8 right-8 bg-primary text-background-dark w-16 h-16 rounded-full shadow-2xl shadow-primary/40 flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50">
+        <span class="material-symbols-outlined text-3xl">add_notes</span>
+    </button>
 </body>
 </html>
