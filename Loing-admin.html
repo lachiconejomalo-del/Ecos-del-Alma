@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: { "display": ["Public Sans"] },
+                },
+            },
+        }
+    </script>
+    <style> body { background: radial-gradient(circle at center, #2d1d15 0%, #221610 100%); font-family: 'Public Sans', sans-serif; } </style>
+    <title>Ecos del Alma - Cámara de Custodia</title>
+</head>
+<body class="text-slate-100 flex items-center justify-center min-h-screen px-4">
+    <div class="w-full max-w-lg bg-black/40 p-10 rounded-2xl border border-primary/10 shadow-2xl backdrop-blur-md">
+        <div class="text-center space-y-3 mb-8">
+            <span class="material-symbols-outlined text-primary text-5xl">lock_person</span>
+            <h1 class="text-3xl font-black uppercase tracking-tighter">Cámara de Custodia</h1>
+            <p class="text-slate-400 text-sm italic">Ingresa el código maestro para acceder.</p>
+        </div>
+        <div class="space-y-6">
+            <input id="masterCode" type="password" placeholder="••••••••" class="w-full bg-transparent border-0 border-b-2 border-primary/30 focus:border-primary text-2xl font-bold text-primary text-center outline-none tracking-[0.5em]">
+            <button id="verifyBtn" class="w-full bg-primary hover:bg-orange-600 text-white font-bold py-4 rounded-xl uppercase tracking-widest transition-all">Verificar</button>
+            <div class="text-center"><a href="Index.html" class="text-xs text-primary/60 hover:text-primary transition-colors">Volver al inicio</a></div>
+        </div>
+    </div>
+    <script>
+        const input = document.getElementById('masterCode');
+        const button = document.getElementById('verifyBtn');
+        button.addEventListener('click', () => {
+            // EL CÓDIGO ES: ECOS DEL ALMA 2026
+            if (input.value.toUpperCase() === 'ECOS DEL ALMA 2026') {
+                window.location.href = 'Admin.html';
+            } else {
+                alert('Código Incorrecto.');
+                input.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
