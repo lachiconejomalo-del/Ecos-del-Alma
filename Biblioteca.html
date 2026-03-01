@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1754cf",
+                        "gold": "#d4af37",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0a0d14",
+                        "card-dark": "#161b26",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Newsreader', serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-10 py-4 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary dark:text-gold">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight font-display">Ecos del Alma</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<label class="hidden md:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded h-full bg-slate-100 dark:bg-card-dark border border-slate-200 dark:border-slate-800">
+<div class="text-slate-400 flex items-center justify-center pl-3">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-sm font-normal placeholder:text-slate-500" placeholder="Buscar manuscritos..." value=""/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded h-10 w-10 bg-slate-100 dark:bg-card-dark text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-800 hover:border-gold transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary dark:border-gold" data-alt="User profile avatar of a sophisticated reader" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDV3xDmi9BIohJCK5fU8L3da_gVcDfSkihGBx0FGvkDhcuNd3SrH5QLeqHST5o-O0lV4rCBTX_D5V5ZAiVw1IF5ZYv4bldFl5EBS17tgYyB2Z920P6Un397EWGbCoCiBo-5T41CdBuDwHtoOupdeOCCw-NClsDLy_i6yrBCCyh3nymLL_h41TCWJNhfU32fJ6cEPMIEN37I7URLOekCuMdcrRXCDoMoc-SlZ_Vbb0c1AoXNM-XxhZyIwx4GAaIq2UIPFgYs-T6zlyEV");'></div>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto w-full px-6 py-8">
+<!-- Balance Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12 border-b border-slate-200 dark:border-slate-800 pb-8">
+<div class="space-y-2">
+<h1 class="text-4xl md:text-5xl font-black leading-tight tracking-tight font-display text-slate-900 dark:text-slate-100">
+                    Biblioteca de <span class="text-primary dark:text-gold">Manuscritos Exclusivos</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl">
+                    Relatos ancestrales y fragmentos prohibidos. Desbloquea el conocimiento perdido utilizando tus Fichas de Alma.
+                </p>
+</div>
+<div class="bg-primary/10 dark:bg-gold/10 border border-primary/20 dark:border-gold/30 p-6 rounded-xl flex flex-col items-center md:items-end min-w-[200px]">
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium uppercase tracking-widest mb-1">Tu Saldo Actual</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-gold">auto_awesome</span>
+<p class="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight">1,250 <span class="text-sm font-normal text-primary dark:text-gold">FA</span></p>
+</div>
+</div>
+</div>
+<!-- Filter Tabs -->
+<div class="flex border-b border-slate-200 dark:border-slate-800 mb-8 gap-8 overflow-x-auto whitespace-nowrap">
+<button class="border-b-2 border-primary dark:border-gold text-primary dark:text-gold pb-4 font-bold text-sm tracking-wide">TODOS LOS RELATOS</button>
+<button class="border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-4 font-bold text-sm tracking-wide hover:text-slate-700 dark:hover:text-slate-200 transition-colors">RECIÉN DESCUBIERTOS</button>
+<button class="border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-4 font-bold text-sm tracking-wide hover:text-slate-700 dark:hover:text-slate-200 transition-colors">MÁS VALIOSOS</button>
+<button class="border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-4 font-bold text-sm tracking-wide hover:text-slate-700 dark:hover:text-slate-200 transition-colors">MIS DESBLOQUEOS</button>
+</div>
+<!-- Grid of Locked Books -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<!-- Book Card 1 -->
+<div class="group relative flex flex-col bg-slate-100 dark:bg-card-dark rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-gold/50 transition-all duration-300">
+<div class="relative aspect-[2/3] overflow-hidden">
+<img alt="Dark leather book cover with gold filigree" class="w-full h-full object-cover filter grayscale-[40%] group-hover:grayscale-0 transition-all" data-alt="Antique leather book cover with mystical golden ornaments" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVsJ5zKEutXlWFNMgb29d-o2kMREzQ1hLBbF4fQrcPnD_tnsioELFmXxEm7LQ5xstfAjsAb8FBuyHc0KZfIDXhp4NFbfjGUqR6J3pSuPnVcJJz1SY8wPazg7n5iYzyWp4yQbYXWQkPQZrU02LHjYwKmGKDm5gbgmRE8hdYmTa5bPmtT3jEOxpVpaQQ_37Up1EsXpuZlTVeunGgydqUdVuLwQBcKxjh0zyXcTRfGY-OmAK6LuAZ959Hh5Eace2ISXe7ww06G94bN30M"/>
+<div class="absolute inset-0 bg-background-dark/60 backdrop-blur-[2px] flex items-center justify-center opacity-100">
+<div class="bg-background-dark/80 p-4 rounded-full border border-gold/50 shadow-2xl">
+<span class="material-symbols-outlined text-gold text-4xl">lock</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-xl font-bold font-display text-slate-900 dark:text-slate-100 mb-1">El Susurro del Abismo</h3>
+<p class="text-primary dark:text-gold text-xs font-semibold uppercase tracking-widest mb-3">Elena Vance</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-1">
+                        Un manuscrito recuperado de las ruinas de una civilización que creía que el silencio era una deidad.
+                    </p>
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-1 text-slate-900 dark:text-slate-100 font-bold">
+<span>500</span>
+<span class="text-[10px] text-primary dark:text-gold">FA</span>
+</div>
+<button class="px-6 py-2 bg-primary dark:bg-gold text-white dark:text-background-dark text-xs font-bold rounded-lg uppercase tracking-widest hover:brightness-110 transition-all">
+                            Canjear
+                        </button>
+</div>
+</div>
+</div>
+<!-- Book Card 2 -->
+<div class="group relative flex flex-col bg-slate-100 dark:bg-card-dark rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-gold/50 transition-all duration-300">
+<div class="relative aspect-[2/3] overflow-hidden">
+<img alt="Old tattered pages of a diary" class="w-full h-full object-cover filter grayscale-[40%] group-hover:grayscale-0 transition-all" data-alt="Weathered handwritten pages with mystical sketches" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByZ5IsBQ4Po3gm7ETeoX7XQD3tJw73QNy7eHGIMtHsXsgGwgAtaSnzhv4R0EtIysrs-i3xF4IywvLGATc92GY9LlTYaQ4cLHif1im6TVdgWiw-ok4Vdbx5Xu8ufovL8vmIhLI7H_qQ25_OwlR9Me38o3aCd-XXGNAZ8F1IA_O8eqtdZrSmf7tg3QFlwctjfSI48g7YFxON4IbAIUTBgU_iTOLa552rz2VR_w0BTx39QlHBR3ateT9soAdQ2xOkOFd4MOJqD3CPXYo-"/>
+<div class="absolute inset-0 bg-background-dark/60 backdrop-blur-[2px] flex items-center justify-center opacity-100">
+<div class="bg-background-dark/80 p-4 rounded-full border border-gold/50 shadow-2xl">
+<span class="material-symbols-outlined text-gold text-4xl">lock</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-xl font-bold font-display text-slate-900 dark:text-slate-100 mb-1">Crónicas de Ceniza</h3>
+<p class="text-primary dark:text-gold text-xs font-semibold uppercase tracking-widest mb-3">Marco Valerio</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-1">
+                        Relatos sobre el gran incendio que devoró la Biblioteca de Almas en el tercer ciclo de la era antigua.
+                    </p>
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-1 text-slate-900 dark:text-slate-100 font-bold">
+<span>750</span>
+<span class="text-[10px] text-primary dark:text-gold">FA</span>
+</div>
+<button class="px-6 py-2 bg-primary dark:bg-gold text-white dark:text-background-dark text-xs font-bold rounded-lg uppercase tracking-widest hover:brightness-110 transition-all">
+                            Canjear
+                        </button>
+</div>
+</div>
+</div>
+<!-- Book Card 3 (Disabled/Insufficient Funds Style) -->
+<div class="group relative flex flex-col bg-slate-100 dark:bg-card-dark rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 opacity-90 transition-all duration-300">
+<div class="relative aspect-[2/3] overflow-hidden">
+<img alt="Galaxy and stars background book cover" class="w-full h-full object-cover filter grayscale transition-all" data-alt="Abstract celestial nebula on a book cover design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxgdND59A2M_ZWKhe69chkI4Ghcm8mw6w6INL1_NP__xgpcmx7Jp-Q_bGBLZTRFVhvZ7dDaIw161hS6DOo1iB1_tJ6ahjTgcstQrpRcduikq35fKLzCqw8eWxXZ4O-KOLOgNG1HfOUP8soFBqvzJ_ruNdJYNV5KKmktgQVviy2wgBZyIZOwM97UGUP-wveqSJ8Jr_K9bBEJq985O3bN0QyZXDUxHajkkQiheq11gc6EFMEIXmGbc1OXl2ZFlKmn8wD1zshNafIhTwD"/>
+<div class="absolute inset-0 bg-background-dark/80 backdrop-blur-[4px] flex items-center justify-center">
+<div class="flex flex-col items-center gap-2">
+<div class="bg-background-dark/80 p-4 rounded-full border border-slate-700 shadow-2xl">
+<span class="material-symbols-outlined text-slate-500 text-4xl">lock_clock</span>
+</div>
+<span class="text-[10px] font-bold text-gold/60 uppercase tracking-tighter">Faltan 250 FA</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-xl font-bold font-display text-slate-900 dark:text-slate-100 mb-1">El Cántico de los Astrodos</h3>
+<p class="text-primary dark:text-gold text-xs font-semibold uppercase tracking-widest mb-3">Selena Thorne</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-1">
+                        Un tratado astronómico que sugiere que las estrellas son en realidad ojos de observadores eternos.
+                    </p>
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-1 text-slate-500 font-bold">
+<span>1,500</span>
+<span class="text-[10px] text-slate-500/60 uppercase">FA</span>
+</div>
+<button class="px-6 py-2 bg-slate-300 dark:bg-slate-800 text-slate-500 dark:text-slate-600 text-xs font-bold rounded-lg uppercase tracking-widest cursor-not-allowed" disabled="">
+                            Saldo Insuf.
+                        </button>
+</div>
+</div>
+</div>
+<!-- Book Card 4 -->
+<div class="group relative flex flex-col bg-slate-100 dark:bg-card-dark rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-gold/50 transition-all duration-300">
+<div class="relative aspect-[2/3] overflow-hidden">
+<img alt="Ink and quill on old paper" class="w-full h-full object-cover filter grayscale-[40%] group-hover:grayscale-0 transition-all" data-alt="Vintage quill pen resting on parchment paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrA2-MJybGEey0hrr3P88ZJfHArTrRnfWxsG7CtKp-r6oOL0-7QT-rvOIdkrKcq18QQfarswkRx3YGJ5DUOoVboKd-SqFCBrKUhXVcuKSGfje2evMWaxZVujzNOXvYuRKG6zWHg50StoXRzskstH87mMQUjDS6P0yIGg27vDIS2t1p2Z-LuqXD-JdaUaTovXM6WSwhuU98axr4IzmpuM7zXPk8dUKEqVmpIKN_jZXjzeV5zs6c7JIr0YHRL-VkLdDuholqZsd4l297"/>
+<div class="absolute inset-0 bg-background-dark/60 backdrop-blur-[2px] flex items-center justify-center opacity-100">
+<div class="bg-background-dark/80 p-4 rounded-full border border-gold/50 shadow-2xl">
+<span class="material-symbols-outlined text-gold text-4xl">lock</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-xl font-bold font-display text-slate-900 dark:text-slate-100 mb-1">Poemas de la Sombra</h3>
+<p class="text-primary dark:text-gold text-xs font-semibold uppercase tracking-widest mb-3">Adrian Draken</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-1">
+                        Antología de versos escritos por un monje que decidió vivir en total oscuridad durante cuarenta años.
+                    </p>
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-1 text-slate-900 dark:text-slate-100 font-bold">
+<span>300</span>
+<span class="text-[10px] text-primary dark:text-gold">FA</span>
+</div>
+<button class="px-6 py-2 bg-primary dark:bg-gold text-white dark:text-background-dark text-xs font-bold rounded-lg uppercase tracking-widest hover:brightness-110 transition-all">
+                            Canjear
+                        </button>
+</div>
+</div>
+</div>
+<!-- Book Card 5 -->
+<div class="group relative flex flex-col bg-slate-100 dark:bg-card-dark rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-gold/50 transition-all duration-300">
+<div class="relative aspect-[2/3] overflow-hidden">
+<img alt="Mountain range book cover" class="w-full h-full object-cover filter grayscale-[40%] group-hover:grayscale-0 transition-all" data-alt="Misty mountain landscape on a classic book cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ_ygl5L1m42PHPuktRxzh9BvgOTK_N3m-yWiErSZoNgUSWolOvFko_OwH1tvySB4iiq4dOUamgpMwMITqhttmBy3laYf87AkFvfJ0VaN6LeMRzfHjcg6gRXoqqSxKiP3wMCUhCiC7ym12GTOyDIzFcvyTsUf3iJyCnQbRgqak2Jp1mMDzEd4kS3N8k6BxqDzjkv1Gh2g0n-9UG1e2fWbhMD9JuyH5xP7IDDz4w9Msc8c3BdkGscrhHq1hesBsTrHwCVAiGQB6Ydhm"/>
+<div class="absolute inset-0 bg-background-dark/60 backdrop-blur-[2px] flex items-center justify-center opacity-100">
+<div class="bg-background-dark/80 p-4 rounded-full border border-gold/50 shadow-2xl">
+<span class="material-symbols-outlined text-gold text-4xl">lock</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-xl font-bold font-display text-slate-900 dark:text-slate-100 mb-1">Memorias de la Niebla</h3>
+<p class="text-primary dark:text-gold text-xs font-semibold uppercase tracking-widest mb-3">Julian Frost</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-1">
+                        Un diario de viaje por las Tierras Blancas, donde los recuerdos se desvanecen antes de ser vividos.
+                    </p>
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-1 text-slate-900 dark:text-slate-100 font-bold">
+<span>850</span>
+<span class="text-[10px] text-primary dark:text-gold">FA</span>
+</div>
+<button class="px-6 py-2 bg-primary dark:bg-gold text-white dark:text-background-dark text-xs font-bold rounded-lg uppercase tracking-widest hover:brightness-110 transition-all">
+                            Canjear
+                        </button>
+</div>
+</div>
+</div>
+<!-- Book Card 6 (Disabled Style) -->
+<div class="group relative flex flex-col bg-slate-100 dark:bg-card-dark rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 opacity-90 transition-all duration-300">
+<div class="relative aspect-[2/3] overflow-hidden">
+<img alt="Dark waves on cover" class="w-full h-full object-cover filter grayscale transition-all" data-alt="Deep ocean waves under a moonlit sky book cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwjDIybr624EzGv45wjrPSdQIFsnGSlr-_jE6thwocfh71GPvS4cR65pnNzbmia7ZZB4sj_wj-3YJuv_8eKDGty_MQMrFOwIrRfP2GFVJWYQZLSMCVJArgemY8R0JGf5Ro5k_kK7faa1Rn3uMk5kt_Dy2I6b27QRnqmPLGcdFfhCaK425ecgtRwBX_xITQda9lefYM_aFFOoLol4vstmtfILZWFXPbJ-hDfs3i0GZXeiHBcTAWF08VjHXu4kW5avp4jzILMPEfv3j6"/>
+<div class="absolute inset-0 bg-background-dark/80 backdrop-blur-[4px] flex items-center justify-center">
+<div class="flex flex-col items-center gap-2">
+<div class="bg-background-dark/80 p-4 rounded-full border border-slate-700 shadow-2xl">
+<span class="material-symbols-outlined text-slate-500 text-4xl">lock_clock</span>
+</div>
+<span class="text-[10px] font-bold text-gold/60 uppercase tracking-tighter">Faltan 750 FA</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-xl font-bold font-display text-slate-900 dark:text-slate-100 mb-1">El Abismo de Coral</h3>
+<p class="text-primary dark:text-gold text-xs font-semibold uppercase tracking-widest mb-3">Isabella Mare</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-1">
+                        Leyendas de las ciudades sumergidas que aún respiran bajo el peso del océano infinito.
+                    </p>
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-1 text-slate-500 font-bold">
+<span>2,000</span>
+<span class="text-[10px] text-slate-500/60 uppercase">FA</span>
+</div>
+<button class="px-6 py-2 bg-slate-300 dark:bg-slate-800 text-slate-500 dark:text-slate-600 text-xs font-bold rounded-lg uppercase tracking-widest cursor-not-allowed" disabled="">
+                            Saldo Insuf.
+                        </button>
+</div>
+</div>
+</div>
+<!-- Empty slots to suggest more content -->
+<div class="hidden lg:flex flex-col border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl items-center justify-center p-8 opacity-40">
+<span class="material-symbols-outlined text-5xl mb-2">auto_stories</span>
+<p class="text-xs font-bold uppercase tracking-widest">Próximamente</p>
+</div>
+<div class="hidden xl:flex flex-col border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl items-center justify-center p-8 opacity-40">
+<span class="material-symbols-outlined text-5xl mb-2">auto_stories</span>
+<p class="text-xs font-bold uppercase tracking-widest">Próximamente</p>
+</div>
+</div>
+<!-- Footer Info -->
+<footer class="mt-20 border-t border-slate-200 dark:border-slate-800 pt-12 pb-8 text-center">
+<div class="flex items-center justify-center gap-8 mb-6">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary dark:text-gold text-3xl mb-2">verified</span>
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Autenticidad Garantizada</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary dark:text-gold text-3xl mb-2">history_edu</span>
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Relatos de Colección</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary dark:text-gold text-3xl mb-2">loyalty</span>
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Beneficios Premium</p>
+</div>
+</div>
+<p class="text-slate-500 dark:text-slate-600 text-sm">© 2024 Ecos del Alma - Fragmentos del Tiempo para el Lector Erudito.</p>
+</footer>
+</main>
+</div>
+</body></html>
