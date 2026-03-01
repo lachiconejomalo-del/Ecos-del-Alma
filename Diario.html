@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af37",
+                        "background-dark": "#07080c",
+                        "surface-dark": "#12141d",
+                    },
+                    fontFamily: { "display": ["Newsreader", "serif"] },
+                },
+            },
+        }
+    </script>
+    <style> 
+        body { font-family: 'Newsreader', serif; background: radial-gradient(circle at top right, #1a1c25 0%, #07080c 100%); }
+    </style>
+    <title>Ecos del Alma - Mi Diario</title>
+</head>
+<body class="text-slate-100 min-h-screen">
+    <header class="flex items-center justify-between border-b border-white/5 px-6 py-4 lg:px-20 sticky top-0 z-50 bg-background-dark/50 backdrop-blur-xl">
+        <div class="flex items-center gap-8">
+            <h2 class="text-primary text-xl font-bold italic">Ecos del Alma</h2>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-500">
+                <a class="hover:text-primary transition-colors" href="Index.html">Inicio</a>
+                <a class="hover:text-primary transition-colors" href="poemas.html">Poemas</a>
+                <a class="hover:text-primary transition-colors" href="Concursos.html">Concursos</a>
+                <a class="hover:text-primary transition-colors" href="Biblioteca.html">Biblioteca</a>
+                <a class="text-primary border-b border-primary" href="Diario.html">Mi Diario</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <div class="bg-surface-dark/40 border border-white/5 p-8 md:p-12 rounded-3xl shadow-2xl backdrop-blur-sm">
+            <div class="flex justify-between items-center mb-10">
+                <div class="flex items-center gap-4">
+                    <div class="p-3 bg-primary/10 rounded-full border border-primary/20">
+                        <span class="material-symbols-outlined text-primary text-2xl">history_edu</span>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold italic">Nueva Reflexión</h1>
+                        <p class="text-[10px] text-slate-500 italic uppercase">28 de Febrero, 2026</p>
+                    </div>
+                </div>
+                <button class="bg-primary/10 text-primary border border-primary/20 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest">Guardar</button>
+            </div>
+            <div class="space-y-6">
+                <input type="text" placeholder="Título..." class="w-full bg-transparent border-0 border-b border-white/5 py-4 text-2xl font-bold italic focus:ring-0 focus:border-primary outline-none">
+                <textarea rows="12" placeholder="Escribe aquí tus versos más profundos..." class="w-full bg-transparent border-0 text-lg italic text-slate-300 focus:ring-0 resize-none outline-none"></textarea>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
